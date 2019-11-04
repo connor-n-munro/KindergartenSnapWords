@@ -2,29 +2,34 @@
 //  Kindergarten_Snap_WordsTests.swift
 //  Kindergarten Snap WordsTests
 //
-//  Created by Connor Munro on 11/4/19.
-//  Copyright © 2019 Connor Munro. All rights reserved.
+//  Created by Connor Munro & Ron Gunczler on 11/4/19.
+//  Copyright © 2019 Connor Munro & Ron Gunczler. All rights reserved.
 //
 
 import XCTest
 @testable import Kindergarten_Snap_Words
 
-class Kindergarten_Snap_WordsTests: XCTestCase {
+class Kindergarten_Snap_WordsTests: XCTestCase
+{
 
-    override func setUp() {
+    override func setUp()
+    {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-    override func tearDown() {
+    override func tearDown()
+    {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testExample()
+    {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testPerformanceExample() {
+    func testPerformanceExample()
+    {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
