@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11D23707A4D005AD407 /* AppDelegate.swift */; };
 		9E29D12023707A4D005AD407 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11F23707A4D005AD407 /* ViewController.swift */; };
-		9E29D12323707A4D005AD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12123707A4D005AD407 /* Main.storyboard */; };
+		9E29D12323707A4D005AD407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12123707A4D005AD407 /* LaunchScreen.storyboard */; };
 		9E29D12523707A4E005AD407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12423707A4E005AD407 /* Assets.xcassets */; };
-		9E29D12823707A4E005AD407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */; };
+		9E29D12823707A4E005AD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12623707A4E005AD407 /* Main.storyboard */; };
 		9E29D13323707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13223707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift */; };
 		9E29D13E23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */; };
 /* End PBXBuildFile section */
@@ -37,9 +37,9 @@
 		9E29D11A23707A4D005AD407 /* Kindergarten Snap Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kindergarten Snap Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E29D11D23707A4D005AD407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E29D11F23707A4D005AD407 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9E29D12223707A4D005AD407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E29D12223707A4D005AD407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E29D12423707A4E005AD407 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9E29D12723707A4E005AD407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E29D12723707A4E005AD407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E29D12923707A4E005AD407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E29D12E23707A4E005AD407 /* Kindergarten Snap WordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kindergarten Snap WordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E29D13223707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kindergarten_Snap_WordsTests.swift; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 			children = (
 				9E29D11D23707A4D005AD407 /* AppDelegate.swift */,
 				9E29D11F23707A4D005AD407 /* ViewController.swift */,
-				9E29D12123707A4D005AD407 /* Main.storyboard */,
+				9E29D12123707A4D005AD407 /* LaunchScreen.storyboard */,
 				9E29D12423707A4E005AD407 /* Assets.xcassets */,
-				9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */,
+				9E29D12623707A4E005AD407 /* Main.storyboard */,
 				9E29D12923707A4E005AD407 /* Info.plist */,
 			);
 			path = "Kindergarten Snap Words";
@@ -229,9 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E29D12823707A4E005AD407 /* LaunchScreen.storyboard in Resources */,
+				9E29D12823707A4E005AD407 /* Main.storyboard in Resources */,
 				9E29D12523707A4E005AD407 /* Assets.xcassets in Resources */,
-				9E29D12323707A4D005AD407 /* Main.storyboard in Resources */,
+				9E29D12323707A4D005AD407 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,20 +293,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9E29D12123707A4D005AD407 /* Main.storyboard */ = {
+		9E29D12123707A4D005AD407 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9E29D12223707A4D005AD407 /* Base */,
 			);
-			name = Main.storyboard;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */ = {
+		9E29D12623707A4E005AD407 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9E29D12723707A4E005AD407 /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
