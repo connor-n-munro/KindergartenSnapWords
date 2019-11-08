@@ -11,7 +11,7 @@
 		9E29D12023707A4D005AD407 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11F23707A4D005AD407 /* ViewController.swift */; };
 		9E29D12323707A4D005AD407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12123707A4D005AD407 /* LaunchScreen.storyboard */; };
 		9E29D12523707A4E005AD407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12423707A4E005AD407 /* Assets.xcassets */; };
-		9E29D12823707A4E005AD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12623707A4E005AD407 /* Main.storyboard */; };
+		9E29D12823707A4E005AD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12623707A4E005AD407 /* Main.storyboard */; settings = {ASSET_TAGS = (aboutView, ); }; };
 		9E29D13323707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13223707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift */; };
 		9E29D13E23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */; };
 /* End PBXBuildFile section */
@@ -187,6 +187,9 @@
 		9E29D11223707A4D005AD407 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					aboutView,
+				);
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Connor Munro";
@@ -308,6 +311,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 /* End PBXVariantGroup section */
 
