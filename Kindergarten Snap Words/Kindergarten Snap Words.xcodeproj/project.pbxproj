@@ -14,6 +14,7 @@
 		9E29D12823707A4E005AD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12623707A4E005AD407 /* Main.storyboard */; settings = {ASSET_TAGS = (aboutView, ); }; };
 		9E29D13323707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13223707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift */; };
 		9E29D13E23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */; };
+		9E5E06522379B78F00DC5AAD /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E06512379B78F00DC5AAD /* List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9E29D13923707A4E005AD407 /* Kindergarten Snap WordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kindergarten Snap WordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kindergarten_Snap_WordsUITests.swift; sourceTree = "<group>"; };
 		9E29D13F23707A4E005AD407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E5E06512379B78F00DC5AAD /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				9E29D12423707A4E005AD407 /* Assets.xcassets */,
 				9E29D12623707A4E005AD407 /* Main.storyboard */,
 				9E29D12923707A4E005AD407 /* Info.plist */,
+				9E5E06512379B78F00DC5AAD /* List.swift */,
 			);
 			path = "Kindergarten Snap Words";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				9E29D12023707A4D005AD407 /* ViewController.swift in Sources */,
 				9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */,
+				9E5E06522379B78F00DC5AAD /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

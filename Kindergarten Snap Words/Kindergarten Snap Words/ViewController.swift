@@ -27,7 +27,7 @@ class ViewController: UIViewController
             self.view.viewWithTag(3)?.isHidden = true;
             break
         default:
-            print("broken")
+            print("something went wrong /(sender.tag)" )
         }
         
     }
