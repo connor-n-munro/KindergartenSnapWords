@@ -7,22 +7,28 @@
 //
 
 import Foundation
+import AVFoundation
 
-struct PropertyKey
+class SnapWord
 {
-    static let name = "name"
-    static let words: Array<String> = 
+    var word : String
+    var recordingSession : AVAudioSession!
+    var wordRecorder : AVAudioRecorder!
+    
+    init(word : String)
+    {
+        self.word = word
+    }
 }
 
-class List: NSObject, NSCoding
+class List
 {
-    func encode(with aCoder: NSCoder)
-    {
-        <#code#>
-    }
+    var name : String
+    var words : Array<SnapWord>
     
-    required init?(coder aDecoder: NSCoder)
+    init(newName : String, newWords : Array<SnapWord>)
     {
-        <#code#>
+        self.name = newName
+        self.words = newWords
     }
 }

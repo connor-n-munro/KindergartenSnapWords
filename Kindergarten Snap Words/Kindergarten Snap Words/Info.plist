@@ -40,5 +40,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We want to record your voice so your reader can hear it say the sight words! It will be stored nowhere but your phone.</string>
 </dict>
 </plist>
