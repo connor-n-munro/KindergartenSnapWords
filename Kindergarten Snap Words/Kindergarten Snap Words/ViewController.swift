@@ -7,17 +7,23 @@
 //
 
 import UIKit
-imoprt List
 
 class ViewController: UIViewController
 {
+    override func loadView()
+    {
+        super.loadView()
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         self.view.viewWithTag(3)?.isHidden = true;
     }
-    @IBAction func exitAbout(_ sender: UIButton)
+    @IBAction func switchAbout(_ sender: UIButton)
     {
         switch sender.tag
         {
