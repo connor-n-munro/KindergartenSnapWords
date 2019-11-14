@@ -9,6 +9,11 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
+let fileManager : FileManager
+init(fileManager: FileManager = .default)
+{
+    self.fileManager = fileManager
+}
 
 class SnapWordsCollectionCollectionViewController: UICollectionViewController {
 
@@ -39,11 +44,26 @@ class SnapWordsCollectionCollectionViewController: UICollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
+    private func makeURL(forFile fileName: String) -> URL?
+    {
+        //guard let url = (fileManager as FileManager).url(for: .documentDirectory, in: .userDomainMask).first else
+        //{
+        //    return nil
+        //}
+        //return url.appendingPathComponent(fileName)
+    }
+    
+    func findTotalLists(listsFile: String) -> Int
+    {
+        var total = 0
+        
+        return total
+    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // Programatically return number of completed lists ###################################################################################################################
-        return 0
+        // return number of completed lists
+        return findTotalLists(listsFile: <#T##String#>)
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
