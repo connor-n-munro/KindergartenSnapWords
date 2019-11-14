@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F53A691237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53A690237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift */; };
 		9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11D23707A4D005AD407 /* AppDelegate.swift */; };
 		9E29D12023707A4D005AD407 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11F23707A4D005AD407 /* ViewController.swift */; };
 		9E29D12323707A4D005AD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12123707A4D005AD407 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F53A690237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapWordsCollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		9E29D11A23707A4D005AD407 /* Kindergarten Snap Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kindergarten Snap Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E29D11D23707A4D005AD407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E29D11F23707A4D005AD407 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				9E29D11D23707A4D005AD407 /* AppDelegate.swift */,
 				9E29D11F23707A4D005AD407 /* ViewController.swift */,
 				9E29D12123707A4D005AD407 /* Main.storyboard */,
+				0F53A690237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift */,
 				9E29D12423707A4E005AD407 /* Assets.xcassets */,
 				9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */,
 				9E29D12923707A4E005AD407 /* Info.plist */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F53A691237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift in Sources */,
 				9E29D12023707A4D005AD407 /* ViewController.swift in Sources */,
 				9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */,
 				9E5E06522379B78F00DC5AAD /* List.swift in Sources */,
