@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Kindergarten Snap Words
 //
-//  Created by Connor Munro & Ron Gunczler  on 11/4/19.
+//  Created by Connor Munro & Ron Gunczler on 11/4/19.
 //  Copyright © 2019 Connor Munro & Ron Gunczler. All rights reserved.
 //
 
@@ -13,8 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+   /* lazy var persistentContainer : NSPersistentContainer =
+        {
+            let container = NSPersistentContainer(name: "DataModel")
+            container.loadPersistentStores { description, error in
+                if let error = error {
+                    fatalError("Unable to load persistent stores: \(error)")
+                }
+            }
+        } */
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         // Override point for customization after application launch.
         return true
