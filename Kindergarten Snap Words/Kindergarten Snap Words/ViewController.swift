@@ -13,17 +13,14 @@ class ViewController: UIViewController
     override func loadView()
     {
         super.loadView()
-        
-        
+        self.view.viewWithTag(3)?.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        self.view.viewWithTag(3)?.isHidden = true;
     }
-    @IBAction func switchAbout(_ sender: UIButton)
+   /* @IBAction func switchAbout(_ sender: UIButton)
     {
         switch sender.tag
         {
@@ -37,7 +34,7 @@ class ViewController: UIViewController
             print("something went wrong /(sender.tag)" )
         }
         
-    }
+    } */
     
     
 }

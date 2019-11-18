@@ -1,0 +1,15 @@
+List 1: to, the, and, he, a, I, you, of, it, in.
+List 2: was, said, his, that, she, for, on, they, but, had.
+List 3: at, him, with, up, all, look, is, her, there, some.
+List 4: out, as, be, have, go, we, am, then, little, down.
+List 5: do, can, could, when, did, what, so, see, not, were.
+List 6: get, them, like, one, this, my, would, me, will, yes.
+List 7: big, went, are, come, if, now, first, no, came, ask.
+List 8: very, an, over, your, black, ride, into, just, blue, red.
+List 9: from, good, any, about, around, want, won’t, how, know, has.
+List 10: put, too, got, take, where, every, pretty, jump, green, four.
+List 11: away, find, by, us, here, saw, white, after, well, why.
+List 12: ran, let, help, make, going, under, brown, yellow, five, because.
+List 13: walk, two, or, before, eat, again, play, who, been, may.
+List 14: stop, off, three, seven, eight, cold, goes, six, nine, ten.
+List 15: tell, much, keep, give, work, long, try, new, must, start.

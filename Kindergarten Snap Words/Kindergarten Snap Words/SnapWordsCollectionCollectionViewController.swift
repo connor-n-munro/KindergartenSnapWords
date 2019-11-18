@@ -38,8 +38,10 @@ class SnapWordsCollectionCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // Programatically return number of completed lists ###################################################################################################################
-        return 0
+        // Programatically return number of completed lists
+        let numLists = 0
+        
+        return numLists + 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

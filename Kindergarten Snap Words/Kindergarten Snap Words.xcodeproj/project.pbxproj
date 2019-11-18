@@ -17,6 +17,8 @@
 		9E29D13323707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13223707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift */; };
 		9E29D13E23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */; };
 		9E5E06522379B78F00DC5AAD /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E06512379B78F00DC5AAD /* List.swift */; };
+		ED69823A2380AF5C0011935A /* SnapWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6982392380AF5C0011935A /* SnapWordViewController.swift */; };
+		ED69823E2381E7F00011935A /* snap_words_lists.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED69823D2381E7F00011935A /* snap_words_lists.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kindergarten_Snap_WordsUITests.swift; sourceTree = "<group>"; };
 		9E29D13F23707A4E005AD407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E5E06512379B78F00DC5AAD /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		ED6982392380AF5C0011935A /* SnapWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapWordViewController.swift; sourceTree = "<group>"; };
+		ED69823D2381E7F00011935A /* snap_words_lists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snap_words_lists.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				9E29D11D23707A4D005AD407 /* AppDelegate.swift */,
+				ED6982392380AF5C0011935A /* SnapWordViewController.swift */,
 				9E29D11F23707A4D005AD407 /* ViewController.swift */,
 				9E29D12123707A4D005AD407 /* Main.storyboard */,
 				0F53A690237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift */,
@@ -112,6 +117,7 @@
 				9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */,
 				9E29D12923707A4E005AD407 /* Info.plist */,
 				9E5E06512379B78F00DC5AAD /* List.swift */,
+				ED69823D2381E7F00011935A /* snap_words_lists.txt */,
 			);
 			path = "Kindergarten Snap Words";
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED69823E2381E7F00011935A /* snap_words_lists.txt in Resources */,
 				9E29D12823707A4E005AD407 /* LaunchScreen.storyboard in Resources */,
 				9E29D12523707A4E005AD407 /* Assets.xcassets in Resources */,
 				9E29D12323707A4D005AD407 /* Main.storyboard in Resources */,
@@ -272,6 +279,7 @@
 				0F53A696237E037C007FF287 /* DataModel.xcdatamodeld in Sources */,
 				9E29D12023707A4D005AD407 /* ViewController.swift in Sources */,
 				9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */,
+				ED69823A2380AF5C0011935A /* SnapWordViewController.swift in Sources */,
 				9E5E06522379B78F00DC5AAD /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

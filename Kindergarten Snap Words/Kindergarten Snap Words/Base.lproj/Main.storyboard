@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,14 +12,14 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kindergarten_Snap_Words" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="f1Z-k7-r0H" userLabel="mainView">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="f1Z-k7-r0H" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tfa-jb-KQn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tfa-jb-KQn">
                                 <rect key="frame" x="-366.5" y="-162.5" width="1400" height="700"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kindergarten Snap Words!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e9-dV-H8u">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kindergarten Snap Words!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e9-dV-H8u">
                                 <rect key="frame" x="36.5" y="157.5" width="594" height="60"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
                                 <color key="textColor" red="0.98314230609999997" green="0.34547478230000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -42,116 +38,29 @@
                                     <segue destination="QDj-ok-chY" kind="show" id="r39-IX-eDS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE2-DG-rBo" userLabel="aboutButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE2-DG-rBo" userLabel="aboutButton">
                                 <rect key="frame" x="-50.5" y="317" width="157" height="58"/>
                                 <accessibility key="accessibilityConfiguration" identifier="aboutButton"/>
                                 <state key="normal" title="Button" image="info">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="About">
+                                        <fragment content=" ">
                                             <attributes>
-                                                <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="36" name=".SFNSDisplay"/>
+                                                <font key="NSFont" metaFont="smallSystem"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="7sq-an-ZYI" kind="show" id="w0k-8C-e0I"/>
+                                </connections>
                             </button>
-                            <view alpha="0.69999998807907104" tag="3" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWU-50-A8J" userLabel="aboutView">
-                                <rect key="frame" x="90" y="40" width="717" height="335"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pv2-i7-wIc">
-                                        <rect key="frame" x="8" y="0.0" width="709" height="315"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="blurb" rowHeight="118" id="UWh-Dg-4ob">
-                                                <rect key="frame" x="0.0" y="28" width="709" height="118"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UWh-Dg-4ob" id="hkq-ma-9pX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="709" height="117.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app was developed by a kindergartener and his parents, for kindergarteners everywhere to help learn snap words on the go!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkO-RH-uiK">
-                                                            <rect key="frame" x="0.0" y="5" width="709" height="113"/>
-                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="34"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="NkO-RH-uiK" firstAttribute="leading" secondItem="hkq-ma-9pX" secondAttribute="leading" id="KPh-EX-vc3"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="NkO-RH-uiK" secondAttribute="bottom" constant="-11" id="jGh-PN-R9Z"/>
-                                                        <constraint firstItem="NkO-RH-uiK" firstAttribute="top" secondItem="hkq-ma-9pX" secondAttribute="topMargin" constant="-6" id="jlL-6P-twb"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NkO-RH-uiK" secondAttribute="trailing" id="nQM-VR-Lob"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="credits" rowHeight="171" id="Kth-q4-Cmf">
-                                                <rect key="frame" x="0.0" y="146" width="709" height="171"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kth-q4-Cmf" id="Jkz-WL-ik5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="709" height="170.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffp-JD-Pl0">
-                                                            <rect key="frame" x="0.0" y="2" width="417" height="167"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="167" id="FhD-cf-68J"/>
-                                                                <constraint firstAttribute="width" constant="417" id="RpE-EE-2EB"/>
-                                                            </constraints>
-                                                            <string key="text">Designed by: The Kahook Family
-Programmers: Ron Gunczler &amp; Connor Munro
-Project mgmt: Joshua Steinberg MD
-Feedback: nida.kahook@gmail.com
-Version: 1.0
-Copyright: March 30th, 2019</string>
-                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grW-5d-aQv" userLabel="exitAboutButton">
-                                                            <rect key="frame" x="597" y="128" width="101" height="58"/>
-                                                            <accessibility key="accessibilityConfiguration" identifier="exitAboutButton"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="58" id="0IY-IY-XNM"/>
-                                                                <constraint firstAttribute="width" secondItem="grW-5d-aQv" secondAttribute="height" multiplier="101:58" id="HTg-rm-i48"/>
-                                                                <constraint firstAttribute="width" secondItem="grW-5d-aQv" secondAttribute="height" multiplier="101:58" id="hE0-y2-6Aa"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
-                                                            <state key="normal" title="Return"/>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="grW-5d-aQv" secondAttribute="bottom" constant="-26" id="4jY-Wx-O8p"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="grW-5d-aQv" secondAttribute="trailing" constant="-13" id="Ezz-B7-54F"/>
-                                                        <constraint firstItem="grW-5d-aQv" firstAttribute="leading" secondItem="Ffp-JD-Pl0" secondAttribute="trailing" constant="180" id="Q4t-JV-nwL"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="grW-5d-aQv" secondAttribute="trailing" constant="-53" id="Ttt-VX-0Vg"/>
-                                                        <constraint firstAttribute="trailing" secondItem="grW-5d-aQv" secondAttribute="trailing" constant="25" id="ewW-XT-t5V"/>
-                                                        <constraint firstItem="Ffp-JD-Pl0" firstAttribute="centerY" secondItem="Jkz-WL-ik5" secondAttribute="centerY" id="faS-Zw-8d2"/>
-                                                        <constraint firstItem="Ffp-JD-Pl0" firstAttribute="leading" secondItem="Jkz-WL-ik5" secondAttribute="leading" id="l8p-Hw-3K1"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <sections/>
-                                    </tableView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration" identifier="aboutView"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="896" id="ga2-yn-N4h"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CE2-DG-rBo" firstAttribute="centerY" secondItem="f1Z-k7-r0H" secondAttribute="centerY" constant="158.5" id="4Tq-uw-wb8"/>
                             <constraint firstItem="2e9-dV-H8u" firstAttribute="centerY" secondItem="f1Z-k7-r0H" secondAttribute="centerY" id="4mj-Ot-1i2"/>
-                            <constraint firstItem="cWU-50-A8J" firstAttribute="centerY" secondItem="f1Z-k7-r0H" secondAttribute="centerY" id="7jz-wT-XT1"/>
                             <constraint firstItem="DbR-Fu-5at" firstAttribute="top" secondItem="f1Z-k7-r0H" secondAttribute="top" constant="20" symbolic="YES" id="Auu-Nq-5EZ"/>
-                            <constraint firstItem="cWU-50-A8J" firstAttribute="centerY" secondItem="f1Z-k7-r0H" secondAttribute="centerY" id="GZn-66-S7m"/>
                             <constraint firstItem="DbR-Fu-5at" firstAttribute="leading" secondItem="fdv-c0-Bcg" secondAttribute="leading" constant="671" id="PAJ-pY-RTj"/>
                             <constraint firstItem="2e9-dV-H8u" firstAttribute="centerX" secondItem="f1Z-k7-r0H" secondAttribute="centerX" id="PNy-IY-G22"/>
                             <constraint firstItem="Tfa-jb-KQn" firstAttribute="centerY" secondItem="f1Z-k7-r0H" secondAttribute="centerY" id="X70-kb-w5h"/>
@@ -162,10 +71,88 @@ Copyright: March 30th, 2019</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fdv-c0-Bcg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tfh-8d-4Cz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-111" y="-1393"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ghF-OB-N5M">
+            <objects>
+                <tableViewController id="7sq-an-ZYI" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pba-1E-jkr">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="149" id="gH5-xZ-L25">
+                                <rect key="frame" x="0.0" y="28" width="667" height="149"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gH5-xZ-L25" id="Rlx-Sf-u9C">
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="149"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This app was developed by a kindergartener and his parents, for kindergarteners everywhere to help learn snap words on the go!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-4x-xhx">
+                                            <rect key="frame" x="20" y="0.0" width="627" height="149"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
+                                            <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="195" id="SC1-54-dVS">
+                                <rect key="frame" x="0.0" y="177" width="667" height="195"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SC1-54-dVS" id="Ure-x3-CMC">
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="195"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsM-Fu-qtS">
+                                            <rect key="frame" x="20" y="11" width="627" height="149"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">Designed by: The Kahook Family
+Programmers: Ron Gunczler &amp; Connor Munro
+Project mgmt: Joshua Steinberg MD
+Feedback: nida.kahook@gmail.com
+Version: 1.0
+Copyright: March 30th, 2019</string>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                            <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjW-cN-i4B">
+                                            <rect key="frame" x="567" y="115" width="80" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                            <state key="normal" title="Return">
+                                                <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="H9H-QS-HQI"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7sq-an-ZYI" id="PHi-iO-sXf"/>
+                            <outlet property="delegate" destination="7sq-an-ZYI" id="aW1-z4-Pzo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qxc-oF-qcE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZW-na-Lc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-109.29535232383809" y="-431.19999999999999"/>
         </scene>
         <!--My Snap Words-->
         <scene sceneID="9LY-WR-Npb">
@@ -249,6 +236,7 @@ Copyright: March 30th, 2019</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QDj-ok-chY" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="n3h-HO-1EM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="daq-hR-XQS">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -267,4 +255,7 @@ Copyright: March 30th, 2019</string>
         <image name="background" width="1400" height="700"/>
         <image name="info" width="60" height="47"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="H9H-QS-HQI"/>
+    </inferredMetricsTieBreakers>
 </document>

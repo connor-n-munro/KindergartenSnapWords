@@ -11,11 +11,17 @@ import AVFoundation
 
 class SnapWord
 {
-    var word : String
-    var recordingSession : AVAudioSession!
-    var wordRecorder : AVAudioRecorder!
+    var word = String()
+    lazy var recordingSession = AVAudioSession()
+    lazy var wordRecorder = AVAudioRecorder()
     
-    init(word : String)
+    init(word : String, session: AVAudioSession, recorder: AVAudioRecorder)
+    {
+        self.word = word
+        self.recordingSession = session
+        self.wordRecorder = recorder
+    }
+    init(_ word: String)
     {
         self.word = word
     }
@@ -24,11 +30,30 @@ class SnapWord
 class List
 {
     var name : String
-    var words : Array<SnapWord>
+    var words : Array<SnapWord>!
     
     init(newName : String, newWords : Array<SnapWord>)
     {
         self.name = newName
         self.words = newWords
+    }
+    init(newName : String)
+    {
+        self.name = newName
+        self.words = Array()
+    }
+    
+    func getWords() -> [SnapWord]
+    {
+        return self.words
+    }
+    
+    func getNumWords() -> Int
+    {
+        return words.count
+    }
+    func addWord(_ word: String) -> Void
+    {
+        words.append(SnapWord(word))
     }
 }
