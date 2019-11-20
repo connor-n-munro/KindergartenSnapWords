@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,28 +14,15 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kindergarten_Snap_Words" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="f1Z-k7-r0H" userLabel="mainView">
+                    <view key="view" contentMode="scaleToFill" id="f1Z-k7-r0H" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tfa-jb-KQn">
-                                <rect key="frame" x="-366.5" y="-162.5" width="1400" height="700"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tfa-jb-KQn">
+                                <rect key="frame" x="-366" y="-162.5" width="1400" height="700"/>
                             </imageView>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbR-Fu-5at">
-                                <rect key="frame" x="671" y="20" width="112" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="3iB-Tc-pbX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
-                                <state key="normal" title="Next →">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="QDj-ok-chY" kind="show" id="r39-IX-eDS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE2-DG-rBo" userLabel="aboutButton">
-                                <rect key="frame" x="-50.5" y="317" width="157" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE2-DG-rBo" userLabel="aboutButton">
+                                <rect key="frame" x="-4" y="317" width="64" height="58"/>
                                 <accessibility key="accessibilityConfiguration" identifier="aboutButton"/>
                                 <state key="normal" title="Button" image="info">
                                     <attributedString key="attributedTitle">
@@ -49,12 +38,23 @@
                                     <segue destination="RMC-0R-vNA" kind="show" id="Kwj-ji-hr8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kindergarten Snap Words!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e9-dV-H8u">
-                                <rect key="frame" x="36" y="157.5" width="594" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kindergarten Snap Words!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e9-dV-H8u">
+                                <rect key="frame" x="36.5" y="157.5" width="594" height="60"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
                                 <color key="textColor" red="0.98314230609999997" green="0.34547478230000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Uz-4BR">
+                                <rect key="frame" x="502" y="20" width="145" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <state key="normal" title="Next →">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QDj-ok-chY" kind="show" id="PbS-b5-y2R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -63,14 +63,10 @@
                             <constraint firstItem="2e9-dV-H8u" firstAttribute="centerY" secondItem="f1Z-k7-r0H" secondAttribute="centerY" id="4mj-Ot-1i2"/>
                             <constraint firstItem="2e9-dV-H8u" firstAttribute="centerX" secondItem="Tfa-jb-KQn" secondAttribute="centerX" id="54Y-oO-yWj"/>
                             <constraint firstItem="2e9-dV-H8u" firstAttribute="centerY" secondItem="Tfa-jb-KQn" secondAttribute="centerY" id="7QN-5M-Rg6"/>
-                            <constraint firstItem="DbR-Fu-5at" firstAttribute="top" secondItem="f1Z-k7-r0H" secondAttribute="top" constant="20" symbolic="YES" id="Auu-Nq-5EZ"/>
-                            <constraint firstItem="DbR-Fu-5at" firstAttribute="leading" secondItem="fdv-c0-Bcg" secondAttribute="leading" constant="671" id="PAJ-pY-RTj"/>
                             <constraint firstItem="2e9-dV-H8u" firstAttribute="centerX" secondItem="f1Z-k7-r0H" secondAttribute="centerX" id="PNy-IY-G22"/>
                             <constraint firstItem="Tfa-jb-KQn" firstAttribute="centerY" secondItem="f1Z-k7-r0H" secondAttribute="centerY" id="X70-kb-w5h"/>
                             <constraint firstItem="2e9-dV-H8u" firstAttribute="centerY" secondItem="f1Z-k7-r0H" secondAttribute="centerY" id="ZeI-dK-Gab"/>
-                            <constraint firstItem="DbR-Fu-5at" firstAttribute="trailing" secondItem="f1Z-k7-r0H" secondAttribute="trailingMargin" id="bui-IA-DaV"/>
                             <constraint firstItem="CE2-DG-rBo" firstAttribute="bottom" secondItem="fdv-c0-Bcg" secondAttribute="bottom" id="d2Z-V4-NYd"/>
-                            <constraint firstItem="Tfa-jb-KQn" firstAttribute="centerX" secondItem="f1Z-k7-r0H" secondAttribute="centerX" id="j6u-0B-yGf"/>
                             <constraint firstItem="CE2-DG-rBo" firstAttribute="centerX" secondItem="f1Z-k7-r0H" secondAttribute="centerX" constant="-305.5" id="v63-QJ-hrV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fdv-c0-Bcg"/>
@@ -79,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="-1393"/>
+            <point key="canvasLocation" x="-111.99400299850076" y="-1394.4000000000001"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="ist-Ho-veZ">
@@ -88,7 +84,7 @@
                     <view key="view" contentMode="scaleToFill" id="JUy-Cr-Uee">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9Ol-rg-HBe"/>
                     </view>
                     <navigationItem key="navigationItem" id="BD5-lh-Nkw"/>

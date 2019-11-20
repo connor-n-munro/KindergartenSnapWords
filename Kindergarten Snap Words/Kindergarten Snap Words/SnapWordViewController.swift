@@ -28,12 +28,12 @@ class SnapWordViewController: UIViewController
         let prevWordButton = UIButton()
         
         nextWordButton.setTitle("Next Word →", for: .normal)
-        nextWordButton.setTitleColor(.systemBlue, for: .normal)
+      //  nextWordButton.setTitleColor(.systemBlue, for: .normal)
         nextWordButton.addTarget(self, action: #selector(nextWord), for: .touchUpInside)
         nextWordButton.translatesAutoresizingMaskIntoConstraints = false
         
         prevWordButton.setTitle("← Previous Word", for: .normal)
-        prevWordButton.setTitleColor(.systemBlue, for: .normal)
+      //  prevWordButton.setTitleColor(.systemBlue, for: .normal)
         prevWordButton.addTarget(self, action: #selector(prevWord), for: .touchUpInside)
         prevWordButton.translatesAutoresizingMaskIntoConstraints = false
         
