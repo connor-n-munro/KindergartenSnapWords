@@ -44,15 +44,6 @@ class AboutViewController: UIViewController
         return tv
     }()
     
-    let blurb: UILabel =
-    {
-        let text = UILabel()
-        text.text = "This app was developed by a kindergartener and his parents, for kindergarteners everywhere to help learn snap words on the go!"
-        text.textColor = cyan
-        text.translatesAutoresizingMaskIntoConstraints = false
-        return text
-    }()
-    
     override func loadView()
     {
         super.loadView()
@@ -71,7 +62,7 @@ class AboutViewController: UIViewController
     {
         table.delegate = self as? UITableViewDelegate
         table.dataSource = self as? UITableViewDataSource
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        table.register(AboutTableViewCell.self, forCellReuseIdentifier: "cellId")
         
         self.view.addSubview(table)
         
@@ -91,9 +82,13 @@ class AboutViewController: UIViewController
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         // 2
-        let cell = table.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        let cell = table.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! AboutTableViewCell
         cell.backgroundColor = violet
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
     }
     
 
