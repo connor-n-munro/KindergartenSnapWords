@@ -82,8 +82,8 @@ class AboutViewController: UIViewController
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         // 2
-        let cell = table.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! AboutTableViewCell
-        cell.backgroundColor = violet
+        let cell = table.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        //cell.backgroundColor = violet
         return cell
     }
     
