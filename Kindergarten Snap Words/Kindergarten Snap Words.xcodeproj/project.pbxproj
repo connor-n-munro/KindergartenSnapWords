@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F53A691237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53A690237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift */; };
+		0F53A696237E037C007FF287 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F53A694237E037C007FF287 /* DataModel.xcdatamodeld */; };
+		9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11D23707A4D005AD407 /* AppDelegate.swift */; };
+		9E29D12023707A4D005AD407 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11F23707A4D005AD407 /* ViewController.swift */; };
+		9E29D12323707A4D005AD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12123707A4D005AD407 /* Main.storyboard */; };
+		9E29D12523707A4E005AD407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12423707A4E005AD407 /* Assets.xcassets */; };
+		9E29D12823707A4E005AD407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (aboutView, ); }; };
+		9E29D13323707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13223707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift */; };
+		9E29D13E23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */; };
+		9E5E06522379B78F00DC5AAD /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E06512379B78F00DC5AAD /* List.swift */; };
+		ED69823A2380AF5C0011935A /* SnapWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6982392380AF5C0011935A /* SnapWordViewController.swift */; };
+		ED698240238385620011935A /* SnapWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69823F238385620011935A /* SnapWord.swift */; };
+		ED69824423849AED0011935A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69824323849AED0011935A /* AboutViewController.swift */; };
+		ED69824A2385CDD80011935A /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6982492385CDD80011935A /* AboutTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E29D12F23707A4E005AD407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E29D11223707A4D005AD407 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E29D11923707A4D005AD407;
+			remoteInfo = "Kindergarten Snap Words";
+		};
+		9E29D13A23707A4E005AD407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E29D11223707A4D005AD407 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E29D11923707A4D005AD407;
+			remoteInfo = "Kindergarten Snap Words";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F53A690237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapWordsCollectionCollectionViewController.swift; sourceTree = "<group>"; };
+		0F53A695237E037C007FF287 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		9E29D11A23707A4D005AD407 /* Kindergarten Snap Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kindergarten Snap Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E29D11D23707A4D005AD407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E29D11F23707A4D005AD407 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E29D12223707A4D005AD407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E29D12423707A4E005AD407 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E29D12723707A4E005AD407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E29D12923707A4E005AD407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E29D12E23707A4E005AD407 /* Kindergarten Snap WordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kindergarten Snap WordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E29D13223707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kindergarten_Snap_WordsTests.swift; sourceTree = "<group>"; };
+		9E29D13423707A4E005AD407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E29D13923707A4E005AD407 /* Kindergarten Snap WordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kindergarten Snap WordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kindergarten_Snap_WordsUITests.swift; sourceTree = "<group>"; };
+		9E29D13F23707A4E005AD407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E5E06512379B78F00DC5AAD /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		ED6982392380AF5C0011935A /* SnapWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapWordViewController.swift; sourceTree = "<group>"; };
+		ED69823F238385620011935A /* SnapWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapWord.swift; sourceTree = "<group>"; };
+		ED69824323849AED0011935A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		ED6982492385CDD80011935A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E29D11723707A4D005AD407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E29D12B23707A4E005AD407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E29D13623707A4E005AD407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E29D11123707A4D005AD407 = {
+			isa = PBXGroup;
+			children = (
+				9E29D11C23707A4D005AD407 /* Kindergarten Snap Words */,
+				9E29D13123707A4E005AD407 /* Kindergarten Snap WordsTests */,
+				9E29D13C23707A4E005AD407 /* Kindergarten Snap WordsUITests */,
+				9E29D11B23707A4D005AD407 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E29D11B23707A4D005AD407 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E29D11A23707A4D005AD407 /* Kindergarten Snap Words.app */,
+				9E29D12E23707A4E005AD407 /* Kindergarten Snap WordsTests.xctest */,
+				9E29D13923707A4E005AD407 /* Kindergarten Snap WordsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E29D11C23707A4D005AD407 /* Kindergarten Snap Words */ = {
+			isa = PBXGroup;
+			children = (
+				ED6982492385CDD80011935A /* AboutTableViewCell.swift */,
+				ED69824323849AED0011935A /* AboutViewController.swift */,
+				9E29D11D23707A4D005AD407 /* AppDelegate.swift */,
+				ED6982392380AF5C0011935A /* SnapWordViewController.swift */,
+				9E29D11F23707A4D005AD407 /* ViewController.swift */,
+				9E29D12123707A4D005AD407 /* Main.storyboard */,
+				0F53A690237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift */,
+				0F53A694237E037C007FF287 /* DataModel.xcdatamodeld */,
+				9E29D12423707A4E005AD407 /* Assets.xcassets */,
+				9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */,
+				9E29D12923707A4E005AD407 /* Info.plist */,
+				9E5E06512379B78F00DC5AAD /* List.swift */,
+				ED69823F238385620011935A /* SnapWord.swift */,
+			);
+			path = "Kindergarten Snap Words";
+			sourceTree = "<group>";
+		};
+		9E29D13123707A4E005AD407 /* Kindergarten Snap WordsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E29D13223707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift */,
+				9E29D13423707A4E005AD407 /* Info.plist */,
+			);
+			path = "Kindergarten Snap WordsTests";
+			sourceTree = "<group>";
+		};
+		9E29D13C23707A4E005AD407 /* Kindergarten Snap WordsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9E29D13D23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift */,
+				9E29D13F23707A4E005AD407 /* Info.plist */,
+			);
+			path = "Kindergarten Snap WordsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E29D11923707A4D005AD407 /* Kindergarten Snap Words */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E29D14223707A4E005AD407 /* Build configuration list for PBXNativeTarget "Kindergarten Snap Words" */;
+			buildPhases = (
+				9E29D11623707A4D005AD407 /* Sources */,
+				9E29D11723707A4D005AD407 /* Frameworks */,
+				9E29D11823707A4D005AD407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kindergarten Snap Words";
+			productName = "Kindergarten Snap Words";
+			productReference = 9E29D11A23707A4D005AD407 /* Kindergarten Snap Words.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9E29D12D23707A4E005AD407 /* Kindergarten Snap WordsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E29D14523707A4E005AD407 /* Build configuration list for PBXNativeTarget "Kindergarten Snap WordsTests" */;
+			buildPhases = (
+				9E29D12A23707A4E005AD407 /* Sources */,
+				9E29D12B23707A4E005AD407 /* Frameworks */,
+				9E29D12C23707A4E005AD407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E29D13023707A4E005AD407 /* PBXTargetDependency */,
+			);
+			name = "Kindergarten Snap WordsTests";
+			productName = "Kindergarten Snap WordsTests";
+			productReference = 9E29D12E23707A4E005AD407 /* Kindergarten Snap WordsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9E29D13823707A4E005AD407 /* Kindergarten Snap WordsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E29D14823707A4E005AD407 /* Build configuration list for PBXNativeTarget "Kindergarten Snap WordsUITests" */;
+			buildPhases = (
+				9E29D13523707A4E005AD407 /* Sources */,
+				9E29D13623707A4E005AD407 /* Frameworks */,
+				9E29D13723707A4E005AD407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E29D13B23707A4E005AD407 /* PBXTargetDependency */,
+			);
+			name = "Kindergarten Snap WordsUITests";
+			productName = "Kindergarten Snap WordsUITests";
+			productReference = 9E29D13923707A4E005AD407 /* Kindergarten Snap WordsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E29D11223707A4D005AD407 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					aboutView,
+				);
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Connor Munro";
+				TargetAttributes = {
+					9E29D11923707A4D005AD407 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1120;
+					};
+					9E29D12D23707A4E005AD407 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 9E29D11923707A4D005AD407;
+					};
+					9E29D13823707A4E005AD407 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 9E29D11923707A4D005AD407;
+					};
+				};
+			};
+			buildConfigurationList = 9E29D11523707A4D005AD407 /* Build configuration list for PBXProject "Kindergarten Snap Words" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9E29D11123707A4D005AD407;
+			productRefGroup = 9E29D11B23707A4D005AD407 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E29D11923707A4D005AD407 /* Kindergarten Snap Words */,
+				9E29D12D23707A4E005AD407 /* Kindergarten Snap WordsTests */,
+				9E29D13823707A4E005AD407 /* Kindergarten Snap WordsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E29D11823707A4D005AD407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E29D12823707A4E005AD407 /* LaunchScreen.storyboard in Resources */,
+				9E29D12523707A4E005AD407 /* Assets.xcassets in Resources */,
+				9E29D12323707A4D005AD407 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E29D12C23707A4E005AD407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E29D13723707A4E005AD407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E29D11623707A4D005AD407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED69824423849AED0011935A /* AboutViewController.swift in Sources */,
+				0F53A691237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift in Sources */,
+				0F53A696237E037C007FF287 /* DataModel.xcdatamodeld in Sources */,
+				ED69824A2385CDD80011935A /* AboutTableViewCell.swift in Sources */,
+				ED698240238385620011935A /* SnapWord.swift in Sources */,
+				9E29D12023707A4D005AD407 /* ViewController.swift in Sources */,
+				9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */,
+				ED69823A2380AF5C0011935A /* SnapWordViewController.swift in Sources */,
+				9E5E06522379B78F00DC5AAD /* List.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E29D12A23707A4E005AD407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E29D13323707A4E005AD407 /* Kindergarten_Snap_WordsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E29D13523707A4E005AD407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E29D13E23707A4E005AD407 /* Kindergarten_Snap_WordsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E29D13023707A4E005AD407 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E29D11923707A4D005AD407 /* Kindergarten Snap Words */;
+			targetProxy = 9E29D12F23707A4E005AD407 /* PBXContainerItemProxy */;
+		};
+		9E29D13B23707A4E005AD407 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E29D11923707A4D005AD407 /* Kindergarten Snap Words */;
+			targetProxy = 9E29D13A23707A4E005AD407 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9E29D12123707A4D005AD407 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E29D12223707A4D005AD407 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E29D12723707A4E005AD407 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E29D14023707A4E005AD407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9E29D14123707A4E005AD407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E29D14323707A4E005AD407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kindergarten Snap Words/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dr-Steinberg.Kindergarten-Snap-Words";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E29D14423707A4E005AD407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kindergarten Snap Words/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dr-Steinberg.Kindergarten-Snap-Words";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9E29D14623707A4E005AD407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kindergarten Snap WordsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dr-Steinberg.Kindergarten-Snap-WordsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kindergarten Snap Words.app/Kindergarten Snap Words";
+			};
+			name = Debug;
+		};
+		9E29D14723707A4E005AD407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kindergarten Snap WordsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dr-Steinberg.Kindergarten-Snap-WordsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kindergarten Snap Words.app/Kindergarten Snap Words";
+			};
+			name = Release;
+		};
+		9E29D14923707A4E005AD407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kindergarten Snap WordsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dr-Steinberg.Kindergarten-Snap-WordsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kindergarten Snap Words";
+			};
+			name = Debug;
+		};
+		9E29D14A23707A4E005AD407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kindergarten Snap WordsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dr-Steinberg.Kindergarten-Snap-WordsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kindergarten Snap Words";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E29D11523707A4D005AD407 /* Build configuration list for PBXProject "Kindergarten Snap Words" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E29D14023707A4E005AD407 /* Debug */,
+				9E29D14123707A4E005AD407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E29D14223707A4E005AD407 /* Build configuration list for PBXNativeTarget "Kindergarten Snap Words" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E29D14323707A4E005AD407 /* Debug */,
+				9E29D14423707A4E005AD407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E29D14523707A4E005AD407 /* Build configuration list for PBXNativeTarget "Kindergarten Snap WordsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E29D14623707A4E005AD407 /* Debug */,
+				9E29D14723707A4E005AD407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E29D14823707A4E005AD407 /* Build configuration list for PBXNativeTarget "Kindergarten Snap WordsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E29D14923707A4E005AD407 /* Debug */,
+				9E29D14A23707A4E005AD407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0F53A694237E037C007FF287 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0F53A695237E037C007FF287 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 0F53A695237E037C007FF287 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9E29D11223707A4D005AD407 /* Project object */;
+}
