@@ -20,7 +20,6 @@
 		ED69823A2380AF5C0011935A /* SnapWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6982392380AF5C0011935A /* SnapWordViewController.swift */; };
 		ED698240238385620011935A /* SnapWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69823F238385620011935A /* SnapWord.swift */; };
 		ED69824423849AED0011935A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69824323849AED0011935A /* AboutViewController.swift */; };
-		ED69824A2385CDD80011935A /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6982492385CDD80011935A /* AboutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +59,6 @@
 		ED6982392380AF5C0011935A /* SnapWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapWordViewController.swift; sourceTree = "<group>"; };
 		ED69823F238385620011935A /* SnapWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapWord.swift; sourceTree = "<group>"; };
 		ED69824323849AED0011935A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		ED6982492385CDD80011935A /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 		9E29D11C23707A4D005AD407 /* Kindergarten Snap Words */ = {
 			isa = PBXGroup;
 			children = (
-				ED6982492385CDD80011935A /* AboutTableViewCell.swift */,
 				ED69824323849AED0011935A /* AboutViewController.swift */,
 				9E29D11D23707A4D005AD407 /* AppDelegate.swift */,
 				ED6982392380AF5C0011935A /* SnapWordViewController.swift */,
@@ -284,7 +281,6 @@
 				ED69824423849AED0011935A /* AboutViewController.swift in Sources */,
 				0F53A691237DEEB6007FF287 /* SnapWordsCollectionCollectionViewController.swift in Sources */,
 				0F53A696237E037C007FF287 /* DataModel.xcdatamodeld in Sources */,
-				ED69824A2385CDD80011935A /* AboutTableViewCell.swift in Sources */,
 				ED698240238385620011935A /* SnapWord.swift in Sources */,
 				9E29D12023707A4D005AD407 /* ViewController.swift in Sources */,
 				9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */,

@@ -16,19 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Njp-Vk-5hw">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="SRA-kR-p1E">
+                                <rect key="frame" x="-252" y="-143" width="1400" height="700"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kindergarten Snap Words!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJg-zc-bpk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kindergarten Snap Words!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJg-zc-bpk">
                                 <rect key="frame" x="151" y="177" width="594" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
                                 <color key="textColor" red="1" green="0.52628943129236716" blue="0.96219630421947566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SRA-kR-p1E" firstAttribute="centerY" secondItem="jJ2-lT-J7n" secondAttribute="centerY" id="7J9-r7-ztk"/>
+                            <constraint firstItem="KJg-zc-bpk" firstAttribute="centerY" secondItem="jJ2-lT-J7n" secondAttribute="centerY" id="Qaj-J0-CHV"/>
+                            <constraint firstItem="SRA-kR-p1E" firstAttribute="centerX" secondItem="jJ2-lT-J7n" secondAttribute="centerX" id="jV5-SV-F2z"/>
+                            <constraint firstItem="KJg-zc-bpk" firstAttribute="centerX" secondItem="jJ2-lT-J7n" secondAttribute="centerX" id="vki-ol-kfC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vao-Xd-jVO"/>
                     </view>
                 </viewController>
