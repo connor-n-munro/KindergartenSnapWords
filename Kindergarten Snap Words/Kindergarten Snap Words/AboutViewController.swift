@@ -35,60 +35,65 @@ let cyan: UIColor = UIColorFromRGB(0x99CCFF)
 
 class AboutViewController: UIViewController
 {
+    let blurbLabel: UILabel =
+   {
+        let text = UILabel()
+        text.text = "This app was developed by a kindergartener\r and his parents, for kindergarteners everywhere\r to help learn snap words on the go!"
+        text.textColor = .systemTeal
+        text.backgroundColor = .systemPurple
+        text.lineBreakMode = .byWordWrapping
+        text.textAlignment = .center
+        text.numberOfLines = .min
+        text.font = UIFont(name: "MarkerFelt-Thin", size: 30)
+        text.translatesAutoresizingMaskIntoConstraints = false
+        return text
+   }()
     
-    let table: UITableView =
+    let creditsLabel: UILabel =
     {
-        let tv = UITableView()
-        tv.backgroundColor = violet
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        return tv
+        let text = UILabel()
+        text.text = "Designed by: The Kahook Family \rProgrammers: Ron Gunczler & Connor Munro \rProject mgmt: Joshua Steinberg MD \rFeedback: nida.kahook@gmail.com \rVersion: 1.0 \rCopyright: March 30th, 2019"
+        text.textColor = .systemTeal
+        text.lineBreakMode = .byWordWrapping
+        text.numberOfLines = .min
+        text.backgroundColor = .systemPurple
+        text.font = UIFont(name: "MarkerFelt-Thin", size: 30)
+        text.translatesAutoresizingMaskIntoConstraints = false
+        return text
     }()
     
-    override func loadView()
+    
+    
+    let returnButton: UIButton =
     {
-        super.loadView()
-        
-        setupTableView()
-    }
+        let button = UIButton()
+        button.setTitle("Dismiss", for: .normal)
+        button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 25)
+        button.setTitleColor(.systemRed, for: .normal)
+        button.addTarget(self, action: #selector(AboutViewController.returnToMainScreen), for: .touchUpInside)
+        return button
+    }()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        view.backgroundColor = .systemPurple
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.addArrangedSubview(blurbLabel)
+        stackView.addArrangedSubview(creditsLabel)
+        stackView.addArrangedSubview(returnButton)
+        view.addSubview(stackView)
     }
-    
-    func setupTableView() -> Void
+
+    @IBAction func returnToMainScreen() -> Void
     {
-        table.delegate = self as? UITableViewDelegate
-        table.dataSource = self as? UITableViewDataSource
-        table.register(AboutTableViewCell.self, forCellReuseIdentifier: "cellId")
-        
-        self.view.addSubview(table)
-        
-        NSLayoutConstraint.activate([
-            table.topAnchor.constraint(equalTo: self.view.topAnchor),
-            table.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            table.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            table.rightAnchor.constraint(equalTo: self.view.rightAnchor)])
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        // 2
-        let cell = table.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        //cell.backgroundColor = violet
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        dismiss(animated: true, completion: nil)
     }
     
 
