@@ -22,8 +22,8 @@ class AboutViewController: UIViewController
    {
         let text = UILabel()
         text.text = "This app was developed by a kindergartener\r and his parents, for kindergarteners everywhere\r to help learn snap words on the go!"
-        text.textColor = .systemTeal
-        text.backgroundColor = .systemPurple
+        text.textColor = UIColor.blue
+        text.backgroundColor = UIColor.purple
         text.lineBreakMode = .byWordWrapping
         text.textAlignment = .center
         text.numberOfLines = .min
@@ -36,10 +36,10 @@ class AboutViewController: UIViewController
     {
         let text = UILabel()
         text.text = "Designed by: The Kahook Family \rProgrammers: Ron Gunczler & Connor Munro \rProject mgmt: Joshua Steinberg MD \rFeedback: nida.kahook@gmail.com \rVersion: 1.0 \rCopyright: March 30th, 2019"
-        text.textColor = .systemTeal
+        text.textColor = UIColor.blue
         text.lineBreakMode = .byWordWrapping
         text.numberOfLines = .min
-        text.backgroundColor = .systemPurple
+        text.backgroundColor = UIColor.purple
         text.font = UIFont(name: "MarkerFelt-Thin", size: 30)
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
@@ -52,7 +52,7 @@ class AboutViewController: UIViewController
         let button = UIButton()
         button.setTitle("Dismiss", for: .normal)
         button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 25)
-        button.setTitleColor(.systemRed, for: .normal)
+        button.setTitleColor(UIColor.red, for: .normal)
         button.addTarget(self, action: #selector(AboutViewController.returnToMainScreen), for: .touchUpInside)
         return button
     }()
@@ -61,7 +61,7 @@ class AboutViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = UIColor.purple
         //Contents
         let stackView = UIStackView()
         stackView.axis = .vertical
