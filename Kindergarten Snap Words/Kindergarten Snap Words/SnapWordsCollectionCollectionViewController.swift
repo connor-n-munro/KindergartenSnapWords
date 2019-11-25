@@ -9,7 +9,8 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class SnapWordsCollectionCollectionViewController: UICollectionViewController {
+class SnapWordsCollectionCollectionViewController: UICollectionViewController
+{
     
     override func viewDidLoad() {
         super.viewDidLoad()

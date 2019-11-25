@@ -16,23 +16,6 @@ Copyright: March 30th, 2019 */
 import UIKit
 import Foundation
 
-func UIColorFromRGB(_ rgb: UInt32) -> UIColor
-{
-    var redValue: UInt32 = rgb & 0xFF0000
-    redValue = redValue >> 16
-    redValue /= 255
-    var greenValue: UInt32 = rgb & 0x00FF00
-    greenValue = greenValue >> 8
-    greenValue = greenValue/255
-    var blueValue: UInt32 = rgb & 0x0000FF
-    blueValue = blueValue/255
-    return UIColor(red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: 1.0)
-}
-
-let violet: UIColor = UIColorFromRGB(0xEE82EE)
-
-let cyan: UIColor = UIColorFromRGB(0x99CCFF)
-
 class AboutViewController: UIViewController
 {
     let blurbLabel: UILabel =
@@ -79,12 +62,14 @@ class AboutViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .systemPurple
+        //Contents
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.alignment = .fill
+        stackView.spacing = 20
+        stackView.alignment = .center
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        //Finalization
         stackView.addArrangedSubview(blurbLabel)
         stackView.addArrangedSubview(creditsLabel)
         stackView.addArrangedSubview(returnButton)
