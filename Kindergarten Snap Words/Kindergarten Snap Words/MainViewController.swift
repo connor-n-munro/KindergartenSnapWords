@@ -14,7 +14,7 @@ class MainViewController: UIViewController
     {
         let label =  UILabel()
         label.text = "Kindergarten Snap Words!"
-        label.textColor = .systemPink
+        label.textColor = UIColor.purple
         label.font = UIFont(name: "MarkerFelt-Thin", size: 50)
         return label
     }()
@@ -32,7 +32,7 @@ class MainViewController: UIViewController
         let button = UIButton()
         button.titleLabel?.text = "Next →"
         button.titleLabel?.font = UIFont(name: "MarkerFelt-Bold",size: 20)
-        button.tintColor = .systemBlue
+        button.tintColor = UIColor.blue
         button.addTarget(self, action: #selector(MainViewController.toNextPage), for: .touchUpInside)
         return button
     }()
@@ -42,7 +42,7 @@ class MainViewController: UIViewController
         let button = UIButton()
         button.titleLabel?.text = "About?"
         button.titleLabel?.font = UIFont(name: "MarkerFelt-Bold",size: 20)
-        button.tintColor = .systemBlue
+        button.tintColor = UIColor.blue
         button.addTarget(self, action: #selector(MainViewController.toAboutPage), for: .touchUpInside)
         return button
     }()
