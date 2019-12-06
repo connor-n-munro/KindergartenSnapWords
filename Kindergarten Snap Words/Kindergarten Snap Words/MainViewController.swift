@@ -16,6 +16,9 @@ class MainViewController: UIViewController
         label.text = "Kindergarten Snap Words!"
         label.textColor = UIColor.purple
         label.font = UIFont(name: "MarkerFelt-Thin", size: 50)
+        /*label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 10/UIFont.labelFontSize */
         return label
     }()
     
