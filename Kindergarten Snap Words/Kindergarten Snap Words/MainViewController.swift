@@ -16,9 +16,11 @@ class MainViewController: UIViewController
         label.text = "Kindergarten Snap Words!"
         label.textColor = UIColor.purple
         label.font = UIFont(name: "MarkerFelt-Thin", size: 50)
-        /*label.numberOfLines = 0
+        label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 10/UIFont.labelFontSize */
+        label.minimumScaleFactor = 0.5
+        label.baselineAdjustment = .alignCenters
+        label.textAlignment = .center
         return label
     }()
     
@@ -62,6 +64,8 @@ class MainViewController: UIViewController
         stackView.alignment = .center
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        //Layout
+        
         //Finalization
         stackView.addArrangedSubview(nextButton)
         stackView.addArrangedSubview(titleLabel)

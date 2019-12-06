@@ -102,12 +102,14 @@
                                 <state key="normal" title="← Title Screen"/>
                             </button>
                             <connections>
+                                <action selector="returnToMainScreen:" destination="7y9-gE-kQe" id="eTX-lw-9Mq"/>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="LvO-IH-9jw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPg-KE-4hL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7y9-gE-kQe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1248" y="-1394"/>
         </scene>

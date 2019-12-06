@@ -9,7 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class SnapWordsCollectionCollectionViewController: UICollectionViewController
+class SnapWordsCollectionViewController: UICollectionViewController
 {
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class SnapWordsCollectionCollectionViewController: UICollectionViewController
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // Programatically return number of completed lists
-        let numLists = 0
+        var numLists = 0
         
         return numLists + 2
     }

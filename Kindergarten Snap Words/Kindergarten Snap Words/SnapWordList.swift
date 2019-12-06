@@ -23,11 +23,17 @@ public class SnapWord : NSObject, NSCoding
     var url : URL?
     var hasSound : Bool
     
-    init(newWord: String? = nil,
-         ifSound: Bool? = false)
+    override init()
+    {
+        self.word = nil
+        self.hasSound = false
+    }
+    
+    init(newWord: String,
+         ifSound: Bool)
     {
         self.word = newWord
-        self.hasSound = ifSound!
+        self.hasSound = ifSound
     }
     public func encode(with aCoder: NSCoder)
     {
@@ -37,14 +43,14 @@ public class SnapWord : NSObject, NSCoding
 
     public required convenience init?(coder aDecoder: NSCoder)
     {
-        let word = aDecoder.decodeObject(forKey: Keys.word.rawValue) as! String
-        let hasSound = aDecoder.decodeObject(forKey: Keys.hasSound.rawValue) as! Bool
+        let word = aDecoder.decodeObject(forKey: Keys.word.rawValue) as! String? ?? ""
+        let hasSound = aDecoder.decodeObject(forKey: Keys.hasSound.rawValue) as! Bool? ?? false
         self.init(newWord: word, ifSound: hasSound)
         self.url = Bundle.main.url(forResource: word, withExtension: "m4a", subdirectory: "Kindergarten Snap Words/SnapWordsAudio") ?? nil
     }
 }
 
-class SnapWordList : NSObject, NSCoding
+public class SnapWordList : NSObject, NSCoding
 {
     
     enum Keys: String
@@ -66,7 +72,7 @@ class SnapWordList : NSObject, NSCoding
         }
     }
     
-    func encode(with aCoder: NSCoder)
+    public func encode(with aCoder: NSCoder)
     {
         aCoder.encode(title, forKey: Keys.title.rawValue)
         for i in 0...LIST_SIZE
@@ -76,14 +82,14 @@ class SnapWordList : NSObject, NSCoding
         aCoder.encode(words, forKey: Keys.words.rawValue)
     }
 
-    required convenience init?(coder aDecoder: NSCoder)
+    required convenience public init?(coder aDecoder: NSCoder)
     {
         let title = aDecoder.decodeObject(forKey: Keys.title.rawValue) as! String
         //let words = aDecoder.decodeFloat(forKey: Keys.words.rawValue)
         var newWords = [SnapWord](repeating: SnapWord(), count: LIST_SIZE)
         for i in 0...LIST_SIZE
         {
-            newWords[i] = SnapWord.init(coder: aDecoder) ?? SnapWord.init(newWord: "", ifSound: false)
+            newWords[i] = SnapWord.init(coder: aDecoder) ?? SnapWord()
         }
         self.init(title, listOfWords: newWords)
     }
@@ -96,6 +102,13 @@ class SnapWordList : NSObject, NSCoding
     func matchSoundToWords() -> Void
     {
         //match word to URL of soundbyte, all lowercase with m4a file extension
+        for i in 0...LIST_SIZE
+        {
+            if(words[i].word != nil && words[i].hasSound)
+            {
+                words[i].url = Bundle.main.url(forResource: words[i].word?.lowercased(), withExtension: "m4a", subdirectory: "Kindergarten Snap Words/SnapWordsAudio") ?? nil
+            }
+        }
     }
     
     func changeTitle(_ newTitle : String) -> Void
@@ -110,16 +123,22 @@ class SnapWordList : NSObject, NSCoding
             if(self.words[i].word == nil)
             {
                 self.words[i].word = newWord
-                
                 return i
             }
             i += 1
         }
         return -1
     }
-    func addSound(forWord: String)
+    func wordExists(_ i : Int) -> Bool
     {
-        
+        if(words[i].word == nil || words[i].word == "" || i >= LIST_SIZE)  {
+            return false
+        } else {
+            return true
+        }
     }
-    
+    func getWord(_ i : Int) -> String
+    {
+        return words[i].word!
+    }
 }

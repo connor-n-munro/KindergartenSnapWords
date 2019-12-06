@@ -10,15 +10,15 @@ import UIKit
 
 class SnapWordViewController: UIViewController
 {
-    
-    let bundle = Bundle.main
-    
     var specWord : Int = 0
     var list : SnapWordList
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    //MARK: - Word
+    let word : UILabel =
+    {
+        let label = UILabel()
+        
+        return label
+    }()
     
     override func loadView()
     {
@@ -26,29 +26,40 @@ class SnapWordViewController: UIViewController
         
         let nextWordButton = UIButton()
         let prevWordButton = UIButton()
-        
+        //MARK: - NextButton
         nextWordButton.setTitle("Next Word →", for: .normal)
-      //  nextWordButton.setTitleColor(.systemBlue, for: .normal)
         nextWordButton.addTarget(self, action: #selector(nextWord), for: .touchUpInside)
         nextWordButton.translatesAutoresizingMaskIntoConstraints = false
-        
+        //MARK: - PrevButton
         prevWordButton.setTitle("← Previous Word", for: .normal)
-      //  prevWordButton.setTitleColor(.systemBlue, for: .normal)
         prevWordButton.addTarget(self, action: #selector(prevWord), for: .touchUpInside)
         prevWordButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.view.addSubview(nextWordButton)
-        self.view.addSubview(prevWordButton)
+        //MARK: - StackView
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        //stackView.spacing = 20
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.addArrangedSubview(nextWordButton)
+        stackView.addArrangedSubview(prevWordButton)
+        //MARK: - Finalization
+        self.view.addSubview(stackView)
     }
     
     @objc func nextWord()  -> Void
     {
-        /*(if(specWord < list.getWords().count)
+        if(specWord < LIST_SIZE)
         {
             specWord += 1
+            if(list.wordExists(specWord))
+            {
+                word.text = list.getWord(specWord)
+                //change AVAudioPlayer
+            }
         } else {
-            
-        }*/
+            //shake animation
+        }
     }
     
     @objc func prevWord() -> Void
@@ -56,8 +67,12 @@ class SnapWordViewController: UIViewController
         if(specWord > 0)
         {
             specWord -= 1
+            if(list.wordExists(specWord))
+            {
+                word.text = list.getWord(specWord)
+            }
         } else {
-            
+            //shake animation
         }
     }
     
