@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,35 +14,110 @@
         <!--mainView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainView" title="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Kindergarten_Snap_Words" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainView" title="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BMC-qt-3Vp">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dLI-PX-Rvu">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dLI-PX-Rvu" secondAttribute="height" multiplier="667:375" id="GmI-NA-dz5"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pSq-Zc-3g3" appends="YES" id="pWy-aA-uYL"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-Kk-8kr">
+                                <rect key="frame" x="20" y="281" width="215" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="info">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content=" ABOUT">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="40" name="Arial-Black"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="RMC-0R-vNA" kind="show" id="3Kc-fT-wk1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZnS-wc-jLb">
+                                <rect key="frame" x="516" y="20" width="131" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Next -&gt;">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Arial-Black"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="QDj-ok-chY" kind="show" id="Yic-jU-UBw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kindergarten Snap Words!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfu-S5-2kA">
+                                <rect key="frame" x="36" y="157" width="594" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
+                                <color key="textColor" red="1" green="0.52628943130000005" blue="0.96219630420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dLI-PX-Rvu" firstAttribute="bottom" secondItem="Afz-gz-pPg" secondAttribute="bottom" id="Hji-WD-lab"/>
+                            <constraint firstItem="dLI-PX-Rvu" firstAttribute="top" secondItem="Afz-gz-pPg" secondAttribute="top" id="i1x-B1-WbG"/>
+                            <constraint firstItem="dLI-PX-Rvu" firstAttribute="leading" secondItem="BMC-qt-3Vp" secondAttribute="leading" id="kyg-D8-2TC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Afz-gz-pPg"/>
+                    </view>
                     <navigationItem key="navigationItem" id="tfh-8d-4Cz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="pSq-Zc-3g3">
+                    <connections>
+                        <segue destination="QDj-ok-chY" kind="show" identifier="leftSwipe" id="Hw9-9R-fao"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-111.99400299850076" y="-1394.4000000000001"/>
+            <point key="canvasLocation" x="-112.89355322338831" y="-1396"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="ist-Ho-veZ">
             <objects>
                 <viewController storyboardIdentifier="aboutView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RMC-0R-vNA" customClass="AboutViewController" customModule="Kindergarten_Snap_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JUy-Cr-Uee">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="9Ol-rg-HBe"/>
+                        <viewLayoutGuide key="safeArea" id="Vrq-oF-xAm"/>
                     </view>
                     <navigationItem key="navigationItem" id="BD5-lh-Nkw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YG6-HR-4i4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="-469"/>
+            <point key="canvasLocation" x="-112" y="-534"/>
         </scene>
         <!--My Snap Words-->
         <scene sceneID="9LY-WR-Npb">
             <objects>
                 <collectionViewController storyboardIdentifier="snapWordsCollection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ynQ-vk-AdW" customClass="SnapWordsCollectionCollectionViewController" customModule="Kindergarten_Snap_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fen-VO-yjL">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yLS-Yw-qHh">
@@ -58,7 +136,7 @@
                                 </view>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CPX-Dz-ihM">
-                                <rect key="frame" x="60.5" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="61.5" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -73,7 +151,7 @@
                                 </view>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="koc-I6-zEA">
-                                <rect key="frame" x="121" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="123.5" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -97,17 +175,19 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="hxV-AD-HMm"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="mTQ-du-6rj">
                             <button key="customView" opaque="NO" contentMode="left" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NXu-EL-Eda">
-                                <rect key="frame" x="60" y="7" width="199" height="30"/>
+                                <rect key="frame" x="20" y="1" width="199" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="← Title Screen"/>
                             </button>
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="LvO-IH-9jw"/>
+                                <action selector="returnMain:" destination="Vug-e0-igh" id="mzw-UG-QjO"/>
+                                <segue destination="BYZ-38-t0r" kind="showDetail" id="BO3-Ru-wiB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPg-KE-4hL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vug-e0-igh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1248" y="-1394"/>
         </scene>
@@ -118,7 +198,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="n3h-HO-1EM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="daq-hR-XQS">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -131,4 +211,11 @@
             <point key="canvasLocation" x="559.82142857142856" y="-1394.2028985507247"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1400" height="700"/>
+        <image name="info" width="60" height="47"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Yic-jU-UBw"/>
+    </inferredMetricsTieBreakers>
 </document>
