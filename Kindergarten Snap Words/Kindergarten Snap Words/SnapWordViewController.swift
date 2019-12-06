@@ -12,11 +12,21 @@ class SnapWordViewController: UIViewController
 {
     var specWord : Int = 0
     var list : SnapWordList
+    //MARK: - Init
+    init(_ title : String)
+    {
+        
+        super.init()
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     //MARK: - Word
     let word : UILabel =
     {
         let label = UILabel()
-        
+        label.font = UIFont(name: "MarkerFelt-Thin", size: 50)
+        label.numberOfLines = 0
         return label
     }()
     
