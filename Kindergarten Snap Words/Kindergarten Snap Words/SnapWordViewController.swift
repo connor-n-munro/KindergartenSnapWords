@@ -14,7 +14,7 @@ class SnapWordViewController: UIViewController
     let bundle = Bundle.main
     
     var specWord : Int = 0
-    var list : List
+    var list : SnapWordList
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -43,12 +43,12 @@ class SnapWordViewController: UIViewController
     
     @objc func nextWord()  -> Void
     {
-        if(specWord < list.getWords().count)
+        /*(if(specWord < list.getWords().count)
         {
             specWord += 1
         } else {
             
-        }
+        }*/
     }
     
     @objc func prevWord() -> Void

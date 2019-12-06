@@ -13,10 +13,26 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let list1 = ["to", "the", "and", "he", "a", "I", "you", "of", "it", "in"]
+    let list2 = ["was", "said", "his", "that", "she", "for", "on", "they", "but", "had"]
+    let list3 = ["at", "him", "with", "up", "all", "look", "is", "her", "there", "some"]
+    let list4 = ["out", "as", "be", "have", "go", "we", "am", "then", "little", "down"]
+    let list5 = ["do", "can", "could", "when", "did", "what", "so", "see", "not", "were"]
+    let list6 = ["get", "them", "like", "one", "this", "my", "would", "me", "will", "yes"]
+    let list7 = ["big", "went", "are", "come", "if", "now", "first", "no", "came", "ask"]
+    let list8 = ["very", "an", "over", "your", "black", "ride", "into", "just", "blue", "red"]
+    let list9 = ["from", "good", "any", "about", "around", "want", "won’t", "how", "know", "has"]
+    let list10 = ["put", "every", "too", "pretty", "got", "jump", "take", "green", "where", "for"]
+    let list11 = ["away", "saw", "find", "white", "by", "after", "us", "well", "here", "why"]
+    let list12 = ["ran", "under", "let", "brown", "help", "yellow", "make", "five", "going", "because"]
+    let list13 = ["walk", "again", "two", "play", "or", "who", "before", "been", "eat", "may"]
+    let list14 = ["stop", "cold", "off", "goes", "three", "six", "seven", "nine", "eight", "ten"]
+    let list15 = ["tell", "long", "much", "try", "keep", "new", "give", "must", "work", "start"]
+    
    //MARK: - Core Data stack
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    /*lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Core_Data")
         container.loadPersistentStores(completionHandler: {(storeDescription, error) in
             if let error = error as NSError? {
@@ -39,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
+    } */
 
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {

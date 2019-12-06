@@ -2,8 +2,8 @@
 //  MainViewController.swift
 //  Kindergarten Snap Words
 //
-//  Created by Kristen Munro on 11/22/19.
-//  Copyright © 2019 Connor Munro. All rights reserved.
+//  Created by Connor Munro & Ron Gunczler on 11/22/19.
+//  Copyright © 2019 Connor Munro & Ron Gunczler. All rights reserved.
 //
 
 import UIKit

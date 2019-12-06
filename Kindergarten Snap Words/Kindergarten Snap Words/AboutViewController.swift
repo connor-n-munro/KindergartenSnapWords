@@ -2,7 +2,7 @@
 //  SnapWordListsViewController.swift
 //  Kindergarten Snap Words
 //
-//  Created by Kristen Munro and Ron Gunczler on 11/19/19.
+//  Created by Connor Munro and Ron Gunczler on 11/19/19.
 //  Copyright © 2019 Connor Munro and Ron Gunczler. All rights reserved.
 //
 //Blurb: This app was developed by a kindergartener and his parents, for kindergarteners everywhere to help learn snap words on the go!
