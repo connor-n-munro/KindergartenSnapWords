@@ -12,14 +12,16 @@ class SnapWordViewController: UIViewController
 {
     var specWord : Int = 0
     var list : SnapWordList
+    var changed = false
     //MARK: - Init
     required init?(coder: NSCoder)
     {
         self.list = SnapWordList("placeholder")
         super.init(coder: coder)
     }
-    init(_ title : String)
+    init?(_ title : String)
     {
+        self.list = SnapWordList("empty")
         let coder = NSCoder()
         let documentsURL = try! FileManager.default.url(for: .documentDirectory , in: .localDomainMask, appropriateFor: nil, create: false)
         var listURL = URL(fileReferenceLiteralResourceName: "SnapWordList_" + title)
@@ -40,6 +42,7 @@ class SnapWordViewController: UIViewController
                 
             }
         }
+        super.init(coder: coder)
     }
     //MARK: - Word
     let word : UILabel =

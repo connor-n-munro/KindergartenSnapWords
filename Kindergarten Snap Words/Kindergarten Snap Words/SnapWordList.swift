@@ -141,4 +141,9 @@ public class SnapWordList : NSObject, NSCoding
     {
         return words[i].word!
     }
+    
+    func getTitle() -> String
+    {
+        return self.title
+    }
 }
