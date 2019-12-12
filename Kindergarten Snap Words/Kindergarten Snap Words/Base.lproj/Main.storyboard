@@ -181,9 +181,6 @@
                             </button>
                             <connections>
 
-                                <action selector="returnToMainScreen:" destination="7y9-gE-kQe" id="eTX-lw-9Mq"/>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="LvO-IH-9jw"/>
-
                                 <action selector="returnMain:" destination="Vug-e0-igh" id="mzw-UG-QjO"/>
                                 <segue destination="BYZ-38-t0r" kind="showDetail" id="BO3-Ru-wiB"/>
 
@@ -192,8 +189,6 @@
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPg-KE-4hL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-
-                <exit id="7y9-gE-kQe" userLabel="Exit" sceneMemberID="exit"/>
 
                 <exit id="Vug-e0-igh" userLabel="Exit" sceneMemberID="exit"/>
 
