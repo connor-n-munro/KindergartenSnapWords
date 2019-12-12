@@ -180,23 +180,23 @@
                                 <state key="normal" title="← Title Screen"/>
                             </button>
                             <connections>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
                                 <action selector="returnToMainScreen:" destination="7y9-gE-kQe" id="eTX-lw-9Mq"/>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="LvO-IH-9jw"/>
-=======
+<!--=======-->
                                 <action selector="returnMain:" destination="Vug-e0-igh" id="mzw-UG-QjO"/>
                                 <segue destination="BYZ-38-t0r" kind="showDetail" id="BO3-Ru-wiB"/>
->>>>>>> UIFix
+<!-->>>>>>> UIFix-->
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPg-KE-4hL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
                 <exit id="7y9-gE-kQe" userLabel="Exit" sceneMemberID="exit"/>
-=======
+<!--<<<<<<< HEAD-->
                 <exit id="Vug-e0-igh" userLabel="Exit" sceneMemberID="exit"/>
->>>>>>> UIFix
+<!--<<<<<<< HEAD-->
             </objects>
             <point key="canvasLocation" x="1248" y="-1394"/>
         </scene>
