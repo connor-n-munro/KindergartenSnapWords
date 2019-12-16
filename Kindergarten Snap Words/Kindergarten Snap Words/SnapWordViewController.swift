@@ -7,21 +7,32 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SnapWordViewController: UIViewController
 {
     var specWord : Int = 0
+<<<<<<< HEAD
     var list : SnapWordList
     var changed = false
+=======
+    let list : SnapWordList
+    let audioPlayer = AVAudioPlayer()
+    
+>>>>>>> file-managing
     //MARK: - Init
     required init?(coder: NSCoder)
     {
-        self.list = SnapWordList("placeholder")
+        self.list = SnapWordList("")
         super.init(coder: coder)
     }
     init?(_ title : String)
     {
+<<<<<<< HEAD
         self.list = SnapWordList("empty")
+=======
+        let newList = SnapWordList(title)
+>>>>>>> file-managing
         let coder = NSCoder()
         let documentsURL = try! FileManager.default.url(for: .documentDirectory , in: .localDomainMask, appropriateFor: nil, create: false)
         var listURL = URL(fileReferenceLiteralResourceName: "SnapWordList_" + title)
@@ -39,9 +50,13 @@ class SnapWordViewController: UIViewController
         {
             if(file == listURL)
             {
-                
+                newList.words = try! JSONDecoder().decode([SnapWord].self, from: Data(contentsOf: file))
             }
         }
+<<<<<<< HEAD
+=======
+        self.list = newList
+>>>>>>> file-managing
         super.init(coder: coder)
     }
     //MARK: - Word
@@ -52,36 +67,88 @@ class SnapWordViewController: UIViewController
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
+        label.textColor = UIColor.cyan
         return label
     }()
-    
-    override func loadView()
+    //MARK: - homeButton
+    let homeButton : UIButton =
+    {
+        let button = UIButton()
+        button.setTitle("← Return to Main Screen", for: .normal)
+        button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 15)
+        button.titleLabel?.textColor = .cyan
+        button.addTarget(self, action: #selector(goHome), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    //MARK: - nextButton
+    let nextWordButton : UIButton =
+    {
+        let button = UIButton()
+        button.setTitle("Next Word →", for: .normal)
+        button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 25)
+        button.titleLabel?.textColor = .red
+        button.addTarget(self, action: #selector(nextWord), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    //MARK: - prevButton
+    let prevWordButton : UIButton =
+    {
+        let button = UIButton()
+        button.setTitle("← Previous Word", for: .normal)
+        button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 25)
+        button.titleLabel?.textColor = .red
+        button.addTarget(self, action: #selector(prevWord), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+        override func loadView()
     {
         super.loadView()
         
-        let nextWordButton = UIButton()
-        let prevWordButton = UIButton()
-        //MARK: - NextButton
-        nextWordButton.setTitle("Next Word →", for: .normal)
-        nextWordButton.addTarget(self, action: #selector(nextWord), for: .touchUpInside)
-        nextWordButton.translatesAutoresizingMaskIntoConstraints = false
-        //MARK: - PrevButton
-        prevWordButton.setTitle("← Previous Word", for: .normal)
-        prevWordButton.addTarget(self, action: #selector(prevWord), for: .touchUpInside)
-        prevWordButton.translatesAutoresizingMaskIntoConstraints = false
         //MARK: - StackViews
-        let innerStackView = UIStackView()
-        innerStackView.axis = .vertical
-        //stackView.spacing = 20
+        
+        /*outerStackView.axis = .vertical
+        outerStackView.alignment = .leading
+        outerStackView.distribution = .fillProportionally
+        outerStackView.spacing = 50
+        outerStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        innerStackView.axis = .horizontal
+        innerStackView.spacing = 75
         innerStackView.alignment = .center
         innerStackView.distribution = .fill
-        innerStackView.translatesAutoresizingMaskIntoConstraints = false
+        innerStackView.translatesAutoresizingMaskIntoConstraints = false */
+        
+        //MARK: - Finalization
+        self.view.backgroundColor = .purple
+        word.text = list.getWord(specWord)
+        /* innerStackView.addArrangedSubview(word)
         innerStackView.addArrangedSubview(nextWordButton)
         innerStackView.addArrangedSubview(prevWordButton)
-        //MARK: - Finalization
-        self.view.addSubview(innerStackView)
+        outerStackView.addArrangedSubview(homeButton)
+        outerStackView.addArrangedSubview(innerStackView) */
+        self.view.addSubview(word)
+        self.view.addSubview(homeButton)
+        //MARK: - Layout Constraints
+        NSLayoutConstraint.activate([
+            //main label word - centered in the view
+            word.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor),
+            word.centerYAnchor.constraint(equalTo: view.layoutMarginsGuide.centerYAnchor),
+            //home button - top left of screen
+            homeButton.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            homeButton.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            //previous word button - down and to the left of the word in the center of the screen
+            prevWordButton.trailingAnchor.constraint(equalTo: self.word.leadingAnchor),
+            prevWordButton.topAnchor.constraint(equalTo: self.word.bottomAnchor),
+            //next word button - down and to the right of the word in the center of the screen
+            nextWordButton.leadingAnchor.constraint(equalTo: self.word.trailingAnchor),
+            nextWordButton.topAnchor.constraint(equalTo: self.word.bottomAnchor)
+        ])
     }
     
+    //MARK: - Helper Methods
     @objc func nextWord()  -> Void
     {
         if(specWord < LIST_SIZE)
@@ -111,6 +178,11 @@ class SnapWordViewController: UIViewController
         }
     }
     
+    @objc func goHome() -> Void
+    {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -120,7 +192,6 @@ class SnapWordViewController: UIViewController
     
 
     /*
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

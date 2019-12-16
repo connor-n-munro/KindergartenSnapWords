@@ -11,8 +11,14 @@ import AVFoundation
 
 let LIST_SIZE = 10
 
-public class SnapWord : NSObject, NSCoding
+public class SnapWord : Codable
 {
+    enum CodingKeys: String, CodingKey
+    {
+        case hasSound = "has_sound"
+        case word = "word"
+        case url = "url"
+    }
     enum Keys: String
     {
         case word = "word"
@@ -23,10 +29,11 @@ public class SnapWord : NSObject, NSCoding
     var url : URL?
     var hasSound : Bool
     
-    override init()
+    init()
     {
         self.word = nil
         self.hasSound = false
+        
     }
     
     init(newWord: String,
@@ -52,7 +59,6 @@ public class SnapWord : NSObject, NSCoding
 
 public class SnapWordList : NSObject, NSCoding
 {
-    
     enum Keys: String
     {
         case title = "title"
