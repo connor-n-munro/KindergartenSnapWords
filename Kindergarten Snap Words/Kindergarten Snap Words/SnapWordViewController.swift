@@ -122,11 +122,11 @@ class SnapWordViewController: UIViewController
         //MARK: - Layout Constraints
         NSLayoutConstraint.activate([
             //main label word - centered in the view
-            word.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor),
-            word.centerYAnchor.constraint(equalTo: view.layoutMarginsGuide.centerYAnchor),
+            word.centerXAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerXAnchor),
+            word.centerYAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerYAnchor),
             //home button - top left of screen
-            homeButton.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            homeButton.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            homeButton.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor),
+            homeButton.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
             //previous word button - down and to the left of the word in the center of the screen
             prevWordButton.trailingAnchor.constraint(equalTo: self.word.leadingAnchor),
             prevWordButton.topAnchor.constraint(equalTo: self.word.bottomAnchor),
@@ -149,6 +149,14 @@ class SnapWordViewController: UIViewController
             }
         } else {
             //shake animation
+            specWord -= 1
+            let animation = CABasicAnimation(keyPath: "position")
+            animation.duration = 0.1
+            animation.repeatCount = 5
+            animation.autoreverses = true
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: nextWordButton.center.x - 10, y: nextWordButton.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: nextWordButton.center.x + 10, y: nextWordButton.center.y))
+            nextWordButton.layer.add(animation, forKey: "position")
         }
     }
     
@@ -163,6 +171,14 @@ class SnapWordViewController: UIViewController
             }
         } else {
             //shake animation
+            specWord += 1
+            let animation = CABasicAnimation(keyPath: "position")
+            animation.duration = 0.1
+            animation.repeatCount = 5
+            animation.autoreverses = true
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: prevWordButton.center.x - 10, y: prevWordButton.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: prevWordButton.center.x + 10, y: prevWordButton.center.y))
+            prevWordButton.layer.add(animation, forKey: "position")
         }
     }
     
