@@ -69,7 +69,7 @@ public class SnapWordList : NSObject, NSCoding
     var title : String
     var words : [SnapWord]
     
-    init(_ title : String, listOfWords: [SnapWord])
+    init?(_ title : String, listOfWords: [SnapWord])
     {
         self.title = title
         self.words = [SnapWord](repeating: SnapWord(), count: LIST_SIZE)

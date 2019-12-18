@@ -93,9 +93,15 @@ class SnapListTableViewController: UITableViewController {
     
     //MARK: Private Methods
     
-    private func loadSampleLists(){
-        guard let list1 = SnapWordList(listOfWords)
-            else {fatalError("Unable to instantiate list of words")}
+    private func loadSampleLists()
+    {
+        let snapWord1 = SnapWord(newWord: "and", ifSound: false)
+        let snapWord2 = SnapWord(newWord: "the", ifSound: false)
+        let snapWord3 = SnapWord(newWord: "cat", ifSound: false)
+        let listOfWords : [SnapWord] = [snapWord1, snapWord2, snapWord3]
+        let list1 = SnapWordList("sample title", listOfWords: listOfWords)
+        print(list1.getTitle())
+        print(list1.getWord(2))
     }
 
 }
