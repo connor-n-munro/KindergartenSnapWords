@@ -12,14 +12,8 @@ import AVFoundation
 class SnapWordViewController: UIViewController
 {
     var specWord : Int = 0
-<<<<<<< HEAD
     var list : SnapWordList
-    var changed = false
-=======
-    let list : SnapWordList
     let audioPlayer = AVAudioPlayer()
-    
->>>>>>> file-managing
     //MARK: - Init
     required init?(coder: NSCoder)
     {
@@ -28,19 +22,16 @@ class SnapWordViewController: UIViewController
     }
     init?(_ title : String)
     {
-<<<<<<< HEAD
-        self.list = SnapWordList("empty")
-=======
+        self.list = SnapWordList("")
         let newList = SnapWordList(title)
->>>>>>> file-managing
         let coder = NSCoder()
         let documentsURL = try! FileManager.default.url(for: .documentDirectory , in: .localDomainMask, appropriateFor: nil, create: false)
-        var listURL = URL(fileReferenceLiteralResourceName: "SnapWordList_" + title)
+        var listURL = URL(fileReferenceLiteralResourceName: "SnapWordList_" + title.lowercased())
         let docContents =
             try! FileManager.default.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil, options: [.skipsHiddenFiles])
         for file in docContents
         {
-            if(file.lastPathComponent.hasPrefix("SnapWordsList_") && file.lastPathComponent.hasSuffix(title))
+            if(file.lastPathComponent.hasPrefix("SnapWordsList_") && file.lastPathComponent.hasSuffix(title.lowercased()))
             {
                 listURL = file
             }
@@ -53,10 +44,7 @@ class SnapWordViewController: UIViewController
                 newList.words = try! JSONDecoder().decode([SnapWord].self, from: Data(contentsOf: file))
             }
         }
-<<<<<<< HEAD
-=======
         self.list = newList
->>>>>>> file-managing
         super.init(coder: coder)
     }
     //MARK: - Word
