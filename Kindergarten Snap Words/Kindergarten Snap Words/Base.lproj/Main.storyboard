@@ -93,16 +93,16 @@
             </objects>
             <point key="canvasLocation" x="-112.89355322338831" y="-1396"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Snap List Table View Controller-->
         <scene sceneID="IIG-fY-8g2">
             <objects>
-                <tableViewController id="ffJ-Js-wzk" sceneMemberID="viewController">
+                <tableViewController id="ffJ-Js-wzk" customClass="SnapListTableViewController" customModule="Kindergarten_Snap_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="799-KK-ruB">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="31T-Fw-gYw" customClass="SnapListTableViewCell" customModule="Kindergarten_Snap_Words" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SnapListTableViewCell" id="31T-Fw-gYw" customClass="SnapListTableViewCell" customModule="Kindergarten_Snap_Words" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="667" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="31T-Fw-gYw" id="rbB-IB-OdN">

@@ -12,10 +12,13 @@ class SnapListTableViewController: UITableViewController {
     
     //MARK:Properties
     
-    var words = [SnapWord]()
+    var wordLists = [SnapWordList]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Load Sample Data
+        loadSampleLists()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,24 +30,31 @@ class SnapListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return wordLists.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        let reuseIdentifier = "SnapListTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? SnapListTableViewCell  else {
+            fatalError("The cell is not an instance of SnapListTableViewCell.")
+        }
 
-        // Configure the cell...
-
+        // Code referenced from Apple's development tutorial
+        
+        let listInUse = wordLists[indexPath.row]
+        
+        cell.nameLabel.text = listInUse.title
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -99,9 +109,20 @@ class SnapListTableViewController: UITableViewController {
         let snapWord2 = SnapWord(newWord: "the", ifSound: false)
         let snapWord3 = SnapWord(newWord: "cat", ifSound: false)
         let listOfWords : [SnapWord] = [snapWord1, snapWord2, snapWord3]
-        let list1 = SnapWordList("sample title", listOfWords: listOfWords)
-        print(list1.getTitle())
-        print(list1.getWord(2))
+        
+        guard let list1 = SnapWordList("sample title", listOfWords: listOfWords)
+            else {
+                fatalError("Unable to instantiate list1")
+        }
+        guard let list2 = SnapWordList("second title", listOfWords: listOfWords)
+            else {
+                fatalError("Unable to instantiate list2")
+        }
+        
+        wordLists += [list1, list2]
+        
+        //print(list1.getTitle())
+        //print(list1.getWord(2))
     }
 
 }
