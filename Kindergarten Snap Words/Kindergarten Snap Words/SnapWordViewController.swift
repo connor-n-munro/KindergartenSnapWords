@@ -13,7 +13,7 @@ class SnapWordViewController: UIViewController
 {
     var specWord : Int = 0
     var list : SnapWordList
-    let audioPlayer = AVAudioPlayer()
+    var audioPlayer = AVAudioPlayer()
     //MARK: - Init
     required init?(coder: NSCoder)
     {
@@ -91,7 +91,17 @@ class SnapWordViewController: UIViewController
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-        override func loadView()
+    //MARK: - playButton
+    let playButton : UIButton =
+    {
+        let button = UIButton()
+        button.setTitle("▶️", for: .normal)
+        button.addTarget(self, action: #selector(playSound), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    override func loadView()
     {
         super.loadView()
         
@@ -119,6 +129,15 @@ class SnapWordViewController: UIViewController
         outerStackView.addArrangedSubview(innerStackView) */
         self.view.addSubview(word)
         self.view.addSubview(homeButton)
+        self.view.addSubview(playButton)
+        if(list.hasSound(specWord))
+        {
+            playButton.isHidden = true
+        }
+        else
+        {
+            playButton.isHidden = false
+        }
         //MARK: - Layout Constraints
         NSLayoutConstraint.activate([
             //main label word - centered in the view
@@ -132,7 +151,10 @@ class SnapWordViewController: UIViewController
             prevWordButton.topAnchor.constraint(equalTo: self.word.bottomAnchor),
             //next word button - down and to the right of the word in the center of the screen
             nextWordButton.leadingAnchor.constraint(equalTo: self.word.trailingAnchor),
-            nextWordButton.topAnchor.constraint(equalTo: self.word.bottomAnchor)
+            nextWordButton.topAnchor.constraint(equalTo: self.word.bottomAnchor),
+            //play button - centerX, directly in line with other buttons
+            playButton.centerXAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerXAnchor),
+            playButton.centerYAnchor.constraint(equalTo: self.nextWordButton.centerYAnchor)
         ])
     }
     
@@ -145,7 +167,12 @@ class SnapWordViewController: UIViewController
             if(list.wordExists(specWord))
             {
                 word.text = list.getWord(specWord)
-                //change AVAudioPlayer
+                if(list.hasSound(specWord))
+                {
+                    playButton.isHidden = true
+                } else {
+                    playButton.isHidden = false
+                }
             }
         } else {
             //shake animation
@@ -168,6 +195,12 @@ class SnapWordViewController: UIViewController
             if(list.wordExists(specWord))
             {
                 word.text = list.getWord(specWord)
+                if(list.hasSound(specWord))
+                {
+                    playButton.isHidden = true
+                } else {
+                    playButton.isHidden = false
+                }
             }
         } else {
             //shake animation
@@ -187,6 +220,23 @@ class SnapWordViewController: UIViewController
         dismiss(animated: true, completion: nil)
     }
     
+    @objc func playSound() -> Void
+    {
+        if(list.hasSound(specWord))
+        {
+            do
+            {
+                audioPlayer = try AVAudioPlayer(contentsOf: list.getURL(specWord))
+                audioPlayer.play()
+            }
+            catch
+            {
+                fatalError("cannot get sound file")
+            }
+        }
+    }
+    
+    //MARK: - viewDidLoad
     override func viewDidLoad()
     {
         super.viewDidLoad()

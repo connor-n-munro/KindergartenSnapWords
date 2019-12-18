@@ -55,6 +55,16 @@ public class SnapWord : Codable
         self.init(newWord: word, ifSound: hasSound)
         self.url = Bundle.main.url(forResource: word, withExtension: "m4a", subdirectory: "Kindergarten Snap Words/SnapWordsAudio") ?? nil
     }
+    
+    public func ifSound() -> Bool
+    {
+        if(hasSound)
+        {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
 public class SnapWordList : NSObject, NSCoding
@@ -151,5 +161,19 @@ public class SnapWordList : NSObject, NSCoding
     func getTitle() -> String
     {
         return self.title
+    }
+    public func hasSound(_ i : Int) -> Bool
+    {
+        if(words[i].ifSound())
+        {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    public func getURL(_ i : Int) -> URL
+    {
+        return words[i].url!
     }
 }
