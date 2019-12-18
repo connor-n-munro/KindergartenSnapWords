@@ -97,18 +97,30 @@
         <scene sceneID="IIG-fY-8g2">
             <objects>
                 <tableViewController id="ffJ-Js-wzk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="799-KK-ruB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="799-KK-ruB">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="31T-Fw-gYw">
-                                <rect key="frame" x="0.0" y="28" width="667" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="31T-Fw-gYw" customClass="SnapListTableViewCell" customModule="Kindergarten_Snap_Words" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="667" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="31T-Fw-gYw" id="rbB-IB-OdN">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csm-CK-Drb">
+                                            <rect key="frame" x="20" y="11" width="627" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="csm-CK-Drb" id="rcA-ch-waN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -120,7 +132,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGG-HV-Xjh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="701" y="-1396"/>
+            <point key="canvasLocation" x="700.29985007496259" y="-1396"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ueB-Uu-A3i">
+            <objects>
+                <viewController id="WwO-2Z-q9g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="moZ-Hd-JrS">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ovs-U1-Uqy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4BB-rJ-qSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="-541"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="ist-Ho-veZ">
