@@ -73,7 +73,7 @@ public class SnapWordList : NSObject, NSCoding
     {
         self.title = title
         self.words = [SnapWord](repeating: SnapWord(), count: LIST_SIZE)
-        for i in 0...LIST_SIZE {
+        for i in 0...listOfWords.count {
             self.words[i] = listOfWords[i]
         }
     }
