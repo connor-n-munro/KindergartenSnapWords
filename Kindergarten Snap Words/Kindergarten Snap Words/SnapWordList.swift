@@ -53,7 +53,7 @@ public class SnapWord : Codable
         let word = aDecoder.decodeObject(forKey: Keys.word.rawValue) as! String? ?? ""
         let hasSound = aDecoder.decodeObject(forKey: Keys.hasSound.rawValue) as! Bool? ?? false
         self.init(newWord: word, ifSound: hasSound)
-        self.url = Bundle.main.url(forResource: word, withExtension: "m4a", subdirectory: "Kindergarten Snap Words/SnapWordsAudio") ?? nil
+        self.url = Bundle.main.url(forResource: word, withExtension: "m4a", subdirectory: "SnapWordsAudio") ?? nil
     }
     
     public func ifSound() -> Bool
@@ -75,7 +75,7 @@ public class SnapWordList : NSObject, NSCoding
         case words = "words"
     }
     
-    //var audioPlayer : AVAudioPlayer? <-- add to view 
+    //var audioPlayer : AVAudioPlayer? <-- add to view
     var title : String
     var words : [SnapWord]
     
@@ -118,25 +118,26 @@ public class SnapWordList : NSObject, NSCoding
     init(_ title: String, words: [String])
     {
         self.title = title
-        self.words = [SnapWord](repeating: SnapWord(), count: 10)
+        self.words = [SnapWord](repeating: SnapWord(), count: LIST_SIZE)
         super.init()
         var i = 0
         for word in words
         {
-            //print(word)
-            addWord(word, true)
-            //print(getWord(i))
+            self.words[i].word = word
+            self.words[i].hasSound = true
             i += 1
         }
+        matchSoundToWords()
     }
     func matchSoundToWords() -> Void
     {
         //match word to URL of soundbyte, all lowercase with m4a file extension
-        for i in 0...LIST_SIZE
+        for i in 0...9
         {
             if(words[i].word != nil && words[i].hasSound)
             {
-                words[i].url = Bundle.main.url(forResource: words[i].word?.lowercased(), withExtension: "m4a", subdirectory: "Kindergarten Snap Words/SnapWordsAudio") ?? nil
+                let path = Bundle.main.path(forResource: words[i].word, ofType: "m4a")!
+                words[i].url = URL(fileURLWithPath: path)
             }
         }
     }
@@ -145,7 +146,7 @@ public class SnapWordList : NSObject, NSCoding
     {
         self.title = newTitle
     }
-    func addWord(_ newWord : String, _ hasSound : Bool) -> Int
+    func addWord(_ newWord : String, _ hasSound : Bool) -> Void
     {
         var i = 0
         while(i < LIST_SIZE)
@@ -154,11 +155,10 @@ public class SnapWordList : NSObject, NSCoding
             {
                 self.words[i].word = newWord
                 self.words[i].hasSound = hasSound
-                return i
+                return
             }
             i += 1
         }
-        return -1
     }
     func wordExists(_ i : Int) -> Bool
     {
@@ -194,6 +194,11 @@ public class SnapWordList : NSObject, NSCoding
     
     public func getURL(_ i : Int) -> URL
     {
-        return words[i].url!
+        if(wordExists(i) && hasSound(i))
+        {
+            return words[i].url!
+        } else {
+            return URL(string: "noFileFound")!
+        }
     }
 }
