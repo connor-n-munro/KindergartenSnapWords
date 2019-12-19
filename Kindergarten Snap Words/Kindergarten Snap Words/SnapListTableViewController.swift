@@ -48,8 +48,6 @@ class SnapListTableViewController: UITableViewController {
         wordLists.append(list13)
         wordLists.append(list14)
         wordLists.append(list15)
-        print(wordLists[2].words[5].word)
-        print(list3.title)
         //loadSampleLists()
 
         // Uncomment the following line to preserve selection between presentations
@@ -95,12 +93,6 @@ class SnapListTableViewController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow
             {
                 vc?.list = wordLists[indexPath.row]
-                //print()
-                print(indexPath.row)
-                for i in 0...9{
-                    print(wordLists[indexPath.row].words[i].word)
-                    //print(vc?.list.words[i].word)
-                }
             }
         }
     }

@@ -127,7 +127,7 @@ public class SnapWordList : NSObject, NSCoding
         }
       //  for a in 0...9{
       //      print("i",a ,self.words[a].word)
-      //  }
+       // }
         matchSoundToWords()
         
     }
@@ -165,9 +165,9 @@ public class SnapWordList : NSObject, NSCoding
             i += 1
         }
     }
-    func wordExists(_ i : Int) -> Bool
+    func wordExists(_ i : Int) -> Bool //This really needs to change
     {
-        if(i >= 9 || words[i].word == "" || words[i].word == nil )  {
+        if(i > 9 || words[i].word == "" || words[i].word == nil )  {
             return false
         } else {
             return true
@@ -199,7 +199,7 @@ public class SnapWordList : NSObject, NSCoding
     
     public func getURL(_ i : Int) -> URL
     {
-        if(wordExists(i) && hasSound(i))
+        if(wordExists(i) && hasSound(i)) //has sound is automatically set to true. has sound needs to be set by checking the url path. otherwise we have no idea if it's looking in the right place
         {
             return words[i].url!
         } else {
