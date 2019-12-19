@@ -17,4 +17,4 @@ App used to help learn "sight" words and aid reading skills, currently for kinde
 - Record sounds
  
  ## Fixed bugs:
-- screen resizing issue fixed and constraints updated
+- Screen resizing issue fixed and constraints updated
