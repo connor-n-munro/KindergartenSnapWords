@@ -158,13 +158,14 @@ class SnapWordViewController: UIViewController
     //MARK: - Helper Methods
     @objc func nextWord()  -> Void
     {
-        if(specWord < 10)
+        print("from ",specWord)
+        if(specWord < 9)
         {
-            print("got here nextWord")
+            if (specWord <= 0) {specWord = 0}
             specWord += 1
+            print("got here (",specWord,") nextWord")
             if(list.wordExists(specWord))
             {
-                print("b")
                 word.text = list.getWord(specWord)
                 print(word.text!)
                 if(list.hasSound(specWord))
@@ -178,7 +179,8 @@ class SnapWordViewController: UIViewController
             }
         } else {
             //shake animation
-            specWord -= 1
+            //specWord -= 1
+            print("aah next ", specWord)
             let animation = CABasicAnimation(keyPath: "position")
             animation.duration = 0.05
             animation.repeatCount = 3
@@ -187,14 +189,17 @@ class SnapWordViewController: UIViewController
             animation.toValue = NSValue(cgPoint: CGPoint(x: nextWordButton.center.x + 10, y: nextWordButton.center.y))
             nextWordButton.layer.add(animation, forKey: "position")
         }
+        print("all next", specWord)
     }
     
     @objc func prevWord() -> Void
     {
+        print("from", specWord)
         if(specWord > 0)
         {
-            print("got here prevWord")
+            if (specWord >= 9) {specWord = 9}
             specWord -= 1
+            print("got here (",specWord,")prevWord")
             if(list.wordExists(specWord))
             {
                 word.text = list.getWord(specWord)
@@ -209,7 +214,8 @@ class SnapWordViewController: UIViewController
             }
         } else {
             //shake animation
-            specWord += 1
+            //specWord += 1
+            print("aah prev ", specWord)
             let animation = CABasicAnimation(keyPath: "position")
             animation.duration = 0.05
             animation.repeatCount = 3
@@ -218,6 +224,7 @@ class SnapWordViewController: UIViewController
             animation.toValue = NSValue(cgPoint: CGPoint(x: prevWordButton.center.x + 10, y: prevWordButton.center.y))
             prevWordButton.layer.add(animation, forKey: "position")
         }
+        print("all prev", specWord)
     }
     
     @objc func goHome() -> Void
