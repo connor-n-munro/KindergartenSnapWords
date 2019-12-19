@@ -83,8 +83,9 @@ public class SnapWordList : NSObject, NSCoding
     {
         self.title = title
         self.words = [SnapWord](repeating: SnapWord(), count: LIST_SIZE)
-        for i in 0...(listOfWords.count-1) {
+        for i in 0...(listOfWords.count) {
             self.words[i] = listOfWords[i]
+            //print(self.words[i])
         }
     }
     
@@ -124,10 +125,15 @@ public class SnapWordList : NSObject, NSCoding
         for word in words
         {
             self.words[i].word = word
+            print(i,self.words[i].word)
             self.words[i].hasSound = true
             i += 1
         }
+        for a in 0...9{
+            print("i",a ,self.words[a].word)
+        }
         matchSoundToWords()
+        
     }
     func matchSoundToWords() -> Void
     {
