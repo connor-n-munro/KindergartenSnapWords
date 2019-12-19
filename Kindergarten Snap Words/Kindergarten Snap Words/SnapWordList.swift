@@ -146,7 +146,7 @@ public class SnapWordList : NSObject, NSCoding
                 guard let bundle = Bundle(url: bundleURL) else {return}
                 //let soundPath = bundle.path(forResource: words[i].word, ofType: "m4a")
                 //let path = Bundle.main.path(forResource: words[i].word, ofType: "m4a")!
-                words[i].url = bundle.url(forResource: words[i].word, withExtension: "m4a")
+                words[i].url = bundle.url(forResource: words[i].word!.lowercased(), withExtension: "m4a")
             }
         }
     }
