@@ -195,6 +195,9 @@ class SnapWordViewController: UIViewController
     @objc func prevWord() -> Void
     {
         print("from", specWord)
+        for i in 0...9{
+            print(list.getWord(i))
+        }
         if(specWord > 0)
         {
             if (specWord >= 9) {specWord = 9}
@@ -216,6 +219,7 @@ class SnapWordViewController: UIViewController
             //shake animation
             //specWord += 1
             print("aah prev ", specWord)
+            
             let animation = CABasicAnimation(keyPath: "position")
             animation.duration = 0.05
             animation.repeatCount = 3
