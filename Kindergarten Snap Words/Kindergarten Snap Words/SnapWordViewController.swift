@@ -54,6 +54,7 @@ class SnapWordViewController: UIViewController
         label.font = UIFont(name: "MarkerFelt-Thin", size: 50)
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.minimumScaleFactor = 0.5
         label.textColor = UIColor.cyan
         return label
@@ -62,7 +63,7 @@ class SnapWordViewController: UIViewController
     let homeButton : UIButton =
     {
         let button = UIButton()
-        button.setTitle("← Return to Main Screen", for: .normal)
+        button.setTitle("Return to Main Screen", for: .normal)
         button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 15)
         button.titleLabel?.textColor = .cyan
         button.addTarget(self, action: #selector(goHome), for: .touchUpInside)
@@ -121,10 +122,11 @@ class SnapWordViewController: UIViewController
         
         //MARK: - Adding Subviews
         self.view.backgroundColor = .purple
-        word.text = list.getWord(specWord)
         self.view.addSubview(word)
         self.view.addSubview(homeButton)
         self.view.addSubview(playButton)
+        self.view.addSubview(prevWordButton)
+        self.view.addSubview(nextWordButton)
         if(list.hasSound(specWord))
         {
             playButton.isEnabled = true
@@ -136,32 +138,35 @@ class SnapWordViewController: UIViewController
         //MARK: - Layout Constraints
         NSLayoutConstraint.activate([
             //main label word - centered in the view
-            word.centerXAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerXAnchor),
-            word.centerYAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerYAnchor),
+            self.word.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.word.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
             //home button - top left of screen
-            homeButton.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor),
-            homeButton.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
+            self.homeButton.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor),
+            self.homeButton.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
             //previous word button - down and to the left of the word in the center of the screen
-            prevWordButton.trailingAnchor.constraint(equalTo: self.word.leadingAnchor),
-            prevWordButton.topAnchor.constraint(equalTo: self.word.bottomAnchor),
+            self.prevWordButton.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor),
+            self.prevWordButton.bottomAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor),
             //next word button - down and to the right of the word in the center of the screen
-            nextWordButton.leadingAnchor.constraint(equalTo: self.word.trailingAnchor),
-            nextWordButton.topAnchor.constraint(equalTo: self.word.bottomAnchor),
+            self.nextWordButton.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor),
+            self.nextWordButton.bottomAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor),
             //play button - centerX, directly in line with other buttons
-            playButton.centerXAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerXAnchor),
-            playButton.centerYAnchor.constraint(equalTo: self.nextWordButton.centerYAnchor)
+            self.playButton.centerXAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerXAnchor),
+            self.playButton.bottomAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor)
         ])
     }
     
     //MARK: - Helper Methods
     @objc func nextWord()  -> Void
     {
-        if(specWord < LIST_SIZE)
+        if(specWord < 10)
         {
+            print("got here nextWord")
             specWord += 1
             if(list.wordExists(specWord))
             {
+                print("b")
                 word.text = list.getWord(specWord)
+                print(word.text!)
                 if(list.hasSound(specWord))
                 {
                     playButton.isEnabled = true
@@ -175,8 +180,8 @@ class SnapWordViewController: UIViewController
             //shake animation
             specWord -= 1
             let animation = CABasicAnimation(keyPath: "position")
-            animation.duration = 0.1
-            animation.repeatCount = 5
+            animation.duration = 0.05
+            animation.repeatCount = 3
             animation.autoreverses = true
             animation.fromValue = NSValue(cgPoint: CGPoint(x: nextWordButton.center.x - 10, y: nextWordButton.center.y))
             animation.toValue = NSValue(cgPoint: CGPoint(x: nextWordButton.center.x + 10, y: nextWordButton.center.y))
@@ -188,10 +193,13 @@ class SnapWordViewController: UIViewController
     {
         if(specWord > 0)
         {
+            print("got here prevWord")
             specWord -= 1
             if(list.wordExists(specWord))
             {
+                print("b")
                 word.text = list.getWord(specWord)
+                print(word.text!)
                 if(list.hasSound(specWord))
                 {
                     playButton.isEnabled = true
@@ -205,8 +213,8 @@ class SnapWordViewController: UIViewController
             //shake animation
             specWord += 1
             let animation = CABasicAnimation(keyPath: "position")
-            animation.duration = 0.1
-            animation.repeatCount = 5
+            animation.duration = 0.05
+            animation.repeatCount = 3
             animation.autoreverses = true
             animation.fromValue = NSValue(cgPoint: CGPoint(x: prevWordButton.center.x - 10, y: prevWordButton.center.y))
             animation.toValue = NSValue(cgPoint: CGPoint(x: prevWordButton.center.x + 10, y: prevWordButton.center.y))
@@ -239,7 +247,7 @@ class SnapWordViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        word.text = list.getWord(specWord)
         // Do any additional setup after loading the view.
     }
     

@@ -23,7 +23,7 @@ class AboutViewController: UIViewController
         let text = UILabel()
         text.text = "This app was developed by a kindergartener\r and his parents, for kindergarteners everywhere\r to help learn snap words on the go!"
         text.textColor = UIColor.blue
-        text.backgroundColor = UIColor.purple
+        text.backgroundColor = UIColor.cyan
         text.lineBreakMode = .byWordWrapping
         text.textAlignment = .center
         text.numberOfLines = .min
@@ -39,7 +39,7 @@ class AboutViewController: UIViewController
         text.textColor = UIColor.blue
         text.lineBreakMode = .byWordWrapping
         text.numberOfLines = .min
-        text.backgroundColor = UIColor.purple
+        text.backgroundColor = UIColor.cyan
         text.font = UIFont(name: "MarkerFelt-Thin", size: 30)
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
@@ -61,7 +61,7 @@ class AboutViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.purple
+        view.backgroundColor = UIColor.cyan
         //Contents
         let stackView = UIStackView()
         stackView.axis = .vertical

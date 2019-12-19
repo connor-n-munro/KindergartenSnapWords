@@ -115,6 +115,20 @@ public class SnapWordList : NSObject, NSCoding
         self.title = title
         self.words = [SnapWord](repeating: SnapWord(), count: LIST_SIZE)
     }
+    init(_ title: String, words: [String])
+    {
+        self.title = title
+        self.words = [SnapWord](repeating: SnapWord(), count: 10)
+        super.init()
+        var i = 0
+        for word in words
+        {
+            //print(word)
+            addWord(word, true)
+            //print(getWord(i))
+            i += 1
+        }
+    }
     func matchSoundToWords() -> Void
     {
         //match word to URL of soundbyte, all lowercase with m4a file extension
@@ -131,14 +145,15 @@ public class SnapWordList : NSObject, NSCoding
     {
         self.title = newTitle
     }
-    func addWord(_ newWord : String) -> Int
+    func addWord(_ newWord : String, _ hasSound : Bool) -> Int
     {
         var i = 0
         while(i < LIST_SIZE)
         {
-            if(self.words[i].word == nil)
+            if(!wordExists(i))
             {
                 self.words[i].word = newWord
+                self.words[i].hasSound = hasSound
                 return i
             }
             i += 1
@@ -147,7 +162,7 @@ public class SnapWordList : NSObject, NSCoding
     }
     func wordExists(_ i : Int) -> Bool
     {
-        if(words[i].word == nil || words[i].word == "" || i >= LIST_SIZE)  {
+        if(i >= 9 || words[i].word == "" || words[i].word == nil )  {
             return false
         } else {
             return true
@@ -155,7 +170,12 @@ public class SnapWordList : NSObject, NSCoding
     }
     func getWord(_ i : Int) -> String
     {
-        return words[i].word!
+        if(wordExists(i))
+        {
+            return words[i].word!
+        } else {
+            return "Word not found!"
+        }
     }
     
     func getTitle() -> String

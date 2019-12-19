@@ -11,7 +11,6 @@
 		758D761323AAAE340023EE30 /* SnapListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D761223AAAE340023EE30 /* SnapListTableViewCell.swift */; };
 		758D761523AAB3880023EE30 /* SnapListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D761423AAB3880023EE30 /* SnapListTableViewController.swift */; };
 		9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11D23707A4D005AD407 /* AppDelegate.swift */; };
-		9E29D12023707A4D005AD407 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29D11F23707A4D005AD407 /* ViewController.swift */; };
 		9E29D12323707A4D005AD407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12123707A4D005AD407 /* Main.storyboard */; };
 		9E29D12523707A4E005AD407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12423707A4E005AD407 /* Assets.xcassets */; };
 		9E29D12823707A4E005AD407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E29D12623707A4E005AD407 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (aboutView, ); }; };
@@ -196,7 +195,6 @@
 		758D761423AAB3880023EE30 /* SnapListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapListTableViewController.swift; sourceTree = "<group>"; };
 		9E29D11A23707A4D005AD407 /* Kindergarten Snap Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kindergarten Snap Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E29D11D23707A4D005AD407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E29D11F23707A4D005AD407 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E29D12223707A4D005AD407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E29D12423707A4E005AD407 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E29D12723707A4E005AD407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -416,7 +414,6 @@
 				ED69824B238882580011935A /* MainViewController.swift */,
 				9E29D11D23707A4D005AD407 /* AppDelegate.swift */,
 				ED6982392380AF5C0011935A /* SnapWordViewController.swift */,
-				9E29D11F23707A4D005AD407 /* ViewController.swift */,
 				9E29D12123707A4D005AD407 /* Main.storyboard */,
 				758D761423AAB3880023EE30 /* SnapListTableViewController.swift */,
 				758D761223AAAE340023EE30 /* SnapListTableViewCell.swift */,
@@ -892,7 +889,6 @@
 				ED69824423849AED0011935A /* AboutViewController.swift in Sources */,
 				758D761523AAB3880023EE30 /* SnapListTableViewController.swift in Sources */,
 				0F53A691237DEEB6007FF287 /* SnapWordsCollectionViewController.swift in Sources */,
-				9E29D12023707A4D005AD407 /* ViewController.swift in Sources */,
 				9E29D11E23707A4D005AD407 /* AppDelegate.swift in Sources */,
 				ED69824C238882580011935A /* MainViewController.swift in Sources */,
 				ED69823A2380AF5C0011935A /* SnapWordViewController.swift in Sources */,
