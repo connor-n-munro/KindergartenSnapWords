@@ -118,12 +118,16 @@ public class SnapWordList : NSObject, NSCoding
     }
     init(_ title: String, words: [String])
     {
+        print(words)
         self.title = title
         self.words = [SnapWord]()
         super.init()
+        var i = 0
         for word in words
         {
             self.words.append(SnapWord(newWord: word, ifSound: true))
+            print(word + ": " + words[i])
+            i += 1
         }
       //  for a in 0...9{
       //      print("i",a ,self.words[a].word)
