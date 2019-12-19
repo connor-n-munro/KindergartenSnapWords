@@ -197,9 +197,7 @@ class SnapWordViewController: UIViewController
             specWord -= 1
             if(list.wordExists(specWord))
             {
-                print("b")
                 word.text = list.getWord(specWord)
-                print(word.text!)
                 if(list.hasSound(specWord))
                 {
                     playButton.isEnabled = true

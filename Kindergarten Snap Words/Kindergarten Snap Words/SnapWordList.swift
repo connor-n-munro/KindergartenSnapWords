@@ -196,6 +196,7 @@ public class SnapWordList : NSObject, NSCoding
     {
         if(wordExists(i) && hasSound(i))
         {
+            print(words[i].url!)
             return words[i].url!
         } else {
             return URL(string: "noFileFound")!
