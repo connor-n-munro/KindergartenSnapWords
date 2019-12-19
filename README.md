@@ -18,3 +18,6 @@ App used to help learn "sight" words and aid reading skills, currently for kinde
  
  ## Fixed bugs:
 - Screen resizing issue fixed and constraints updated
+
+## Remaining bugs:
+- Between lines 128 and 133 in `SnapWordList.swift`, the words in each wordlist lose scope or something after being initialized and the whole list is repopulated with only the last element.
