@@ -8,7 +8,8 @@ App used to help learn "sight" words and aid reading skills, currently for kinde
 
 - About page overlay on demand from title page
 - Scrollable list selection page
-- 15 sample word lists
+- 15 sample word lists to study
+- Word-by-word scrolling with audio
  
  
  ## To be implemented:
