@@ -75,7 +75,7 @@ class SnapWordViewController: UIViewController
         let button = UIButton()
         button.setTitle("Next Word →", for: .normal)
         button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 25)
-        button.titleLabel?.textColor = .red
+        button.titleLabel?.textColor = .cyan
         button.addTarget(self, action: #selector(nextWord), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -86,7 +86,7 @@ class SnapWordViewController: UIViewController
         let button = UIButton()
         button.setTitle("← Previous Word", for: .normal)
         button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 25)
-        button.titleLabel?.textColor = .red
+        button.titleLabel?.textColor = .cyan
         button.addTarget(self, action: #selector(prevWord), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -119,24 +119,19 @@ class SnapWordViewController: UIViewController
         innerStackView.distribution = .fill
         innerStackView.translatesAutoresizingMaskIntoConstraints = false */
         
-        //MARK: - Finalization
+        //MARK: - Adding Subviews
         self.view.backgroundColor = .purple
-        if list.wordExists(specWord){word.text = list.getWord(specWord)}
-        /* innerStackView.addArrangedSubview(word)
-        innerStackView.addArrangedSubview(nextWordButton)
-        innerStackView.addArrangedSubview(prevWordButton)
-        outerStackView.addArrangedSubview(homeButton)
-        outerStackView.addArrangedSubview(innerStackView) */
+        word.text = list.getWord(specWord)
         self.view.addSubview(word)
         self.view.addSubview(homeButton)
         self.view.addSubview(playButton)
         if(list.hasSound(specWord))
         {
-            playButton.isHidden = true
-        }
-        else
-        {
-            playButton.isHidden = false
+            playButton.isEnabled = true
+            playButton.alpha = 1.0
+        } else {
+            playButton.isEnabled = false
+            playButton.alpha = 0.5
         }
         //MARK: - Layout Constraints
         NSLayoutConstraint.activate([
@@ -169,9 +164,11 @@ class SnapWordViewController: UIViewController
                 word.text = list.getWord(specWord)
                 if(list.hasSound(specWord))
                 {
-                    playButton.isHidden = true
+                    playButton.isEnabled = true
+                    playButton.alpha = 1.0
                 } else {
-                    playButton.isHidden = false
+                    playButton.isEnabled = false
+                    playButton.alpha = 0.5
                 }
             }
         } else {
@@ -197,9 +194,11 @@ class SnapWordViewController: UIViewController
                 word.text = list.getWord(specWord)
                 if(list.hasSound(specWord))
                 {
-                    playButton.isHidden = true
+                    playButton.isEnabled = true
+                    playButton.alpha = 1.0
                 } else {
-                    playButton.isHidden = false
+                    playButton.isEnabled = false
+                    playButton.alpha = 0.5
                 }
             }
         } else {
