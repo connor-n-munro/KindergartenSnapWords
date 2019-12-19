@@ -125,13 +125,16 @@ public class SnapWordList : NSObject, NSCoding
         for word in words
         {
             self.words[i].word = word
-            print(i,self.words[i].word)
+            //print(i,self.words[i].word)
+            for a in 0...i{
+                print("a", a, self.words[a].word)
+            }
             self.words[i].hasSound = true
             i += 1
         }
-        for a in 0...9{
-            print("i",a ,self.words[a].word)
-        }
+      //  for a in 0...9{
+      //      print("i",a ,self.words[a].word)
+      //  }
         matchSoundToWords()
         
     }
