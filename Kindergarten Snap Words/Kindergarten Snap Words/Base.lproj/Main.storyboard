@@ -63,7 +63,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="ffJ-Js-wzk" kind="show" id="ac6-gu-DNA"/>
+                                    <segue destination="Uwt-D2-tQW" kind="show" id="ac6-gu-DNA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kindergarten Snap Words!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfu-S5-2kA">
@@ -87,13 +87,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="pSq-Zc-3g3">
                     <connections>
-                        <segue destination="ffJ-Js-wzk" kind="show" id="lg5-6P-xPj"/>
+                        <segue destination="Uwt-D2-tQW" kind="show" id="lg5-6P-xPj"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-112.89355322338831" y="-1396"/>
         </scene>
-        <!--Snap List Table View Controller-->
+        <!--Your Snap Word Lists-->
         <scene sceneID="IIG-fY-8g2">
             <objects>
                 <tableViewController id="ffJ-Js-wzk" customClass="SnapListTableViewController" customModule="Kindergarten_Snap_Words" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,6 +120,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="csm-CK-Drb" id="rcA-ch-waN"/>
+                                    <segue destination="WwO-2Z-q9g" kind="show" id="Gyy-Ew-waV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,26 +129,29 @@
                             <outlet property="delegate" destination="ffJ-Js-wzk" id="Rcy-n8-g7v"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jZ4-LD-6Yt"/>
+                    <navigationItem key="navigationItem" title="Your Snap Word Lists" id="jZ4-LD-6Yt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="C8m-oy-4md"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGG-HV-Xjh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700.29985007496259" y="-1396"/>
+            <point key="canvasLocation" x="716" y="-1396"/>
         </scene>
-        <!--View Controller-->
+        <!--Snap Word View Controller-->
         <scene sceneID="ueB-Uu-A3i">
             <objects>
-                <viewController id="WwO-2Z-q9g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="snapWordView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WwO-2Z-q9g" customClass="SnapWordViewController" customModule="Kindergarten_Snap_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="moZ-Hd-JrS">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ovs-U1-Uqy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cL9-SW-CMi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4BB-rJ-qSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="-541"/>
+            <point key="canvasLocation" x="716" y="-535"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="ist-Ho-veZ">
@@ -164,6 +168,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YG6-HR-4i4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-112" y="-534"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QSR-Gm-4WE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uwt-D2-tQW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZGD-OC-P9C"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RGc-VO-SDM">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ffJ-Js-wzk" kind="relationship" relationship="rootViewController" id="cfN-Af-Jnh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qty-qh-rOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="-2334"/>
         </scene>
     </scenes>
     <resources>

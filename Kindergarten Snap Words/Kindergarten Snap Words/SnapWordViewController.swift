@@ -121,7 +121,7 @@ class SnapWordViewController: UIViewController
         
         //MARK: - Finalization
         self.view.backgroundColor = .purple
-        word.text = list.getWord(specWord)
+        if list.wordExists(specWord){word.text = list.getWord(specWord)}
         /* innerStackView.addArrangedSubview(word)
         innerStackView.addArrangedSubview(nextWordButton)
         innerStackView.addArrangedSubview(prevWordButton)
